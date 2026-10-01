@@ -1,0 +1,56 @@
+[
+	{
+		"company": "MobilePay",
+		"description": "Engineered fee calculation systems using C#, SQL, Cassandra, React in event-sourced microservices.",
+		"roles": [
+			{
+				"title": "Student Software Engineer",
+				"fromDate": "2021-07",
+				"toDate": "2022-07"
+			},
+			{
+				"title": "Associate Software Engineer",
+				"fromDate": "2022-07",
+				"toDate": "2023-05"
+			}
+		]
+	},
+	{
+		"company": "Associate Software Engineer",
+		"description": "Worked on the migration of fee calculation systems codebase to new platform, designing data pipelines to ingest, transform, and visualize user payments data.",
+		"roles": [
+			{
+				"title": "Associate Software Engineer",
+				"fromDate": "2023-05",
+				"toDate": "2023-11"
+			}
+		]
+	},
+    {
+		"company": "Vipps MobilePay",
+		"description": "Worked on the migration of fee calculation systems codebase to new platform, designing data pipelines to ingest, transform, and visualize user payments data.",
+		"roles": [
+			{
+				"title": "Associate Software Engineer",
+				"fromDate": "2023-05",
+				"toDate": "2023-11"
+			},
+            {
+				"title": "Software Engineer",
+				"fromDate": "2023-11",
+				"toDate": "2024-03"
+			}
+		]
+	},
+    {
+		"company": "Danske Bank",
+		"description": " I’m working on cloud transformation - containerizing internal banking systems with Docker, orchestrating them in EKS, and migrating workloads to AWS. My work lays the data foundation for downstream systems.",
+		"roles": [
+			{
+				"title": "Software Engineer",
+				"fromDate": "2024-03",
+				"toDate": null
+			}
+		]
+	}
+]

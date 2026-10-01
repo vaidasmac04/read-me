@@ -1,0 +1,142 @@
+[
+	{
+		"name": "Rimi Vilniaus maratonas 2022",
+		"distanceName": null,
+		"date": "2022-09-11",
+		"distanceKm": 5,
+		"durationSeconds": 1584
+	},
+	{
+		"name": "Bėgimas „Vilkų takais“ 2023",
+		"distanceName": null,
+		"date": "2023-04-16",
+		"distanceKm": 5.2,
+		"durationSeconds": 1603
+	},
+	{
+		"name": "Vilnius 700 Pusmaratonis 2023",
+		"distanceName": null,
+		"date": "2023-05-27",
+		"distanceKm": 10,
+		"durationSeconds": 3292
+	},
+	{
+		"name": "Rimi Vilniaus Maratonas 2023",
+		"distanceName": null,
+		"date": "2023-09-10",
+		"distanceKm": 10,
+		"durationSeconds": 3058
+	},
+	{
+		"name": "XXXII tradicinis tarptautinis pagarbos bėgimas „Gyvybės ir Mirties keliu“",
+		"distanceName": null,
+		"date": "2024-01-14",
+		"distanceKm": 9,
+		"durationSeconds": 3155
+	},
+	{
+		"name": "Bėgimas „Vilkų takais“ 2024",
+		"distanceName": null,
+		"date": "2024-04-14",
+		"distanceKm": 5.2,
+		"durationSeconds": 1527
+	},
+	{
+		"name": "Maratonas „Vilniaus Tiltai“",
+		"distanceName": null,
+		"date": "2024-07-14",
+		"distanceKm": 10.6,
+		"durationSeconds": 2936
+	},
+	{
+		"name": "Rimi Vilniaus Maratonas 2024",
+		"distanceName": "Half Marathon",
+		"date": "2024-09-08",
+		"distanceKm": 21.0975,
+		"durationSeconds": 5962
+	},
+	{
+		"name": "Juozo Songailos bėgimas 2024",
+		"distanceName": null,
+		"date": "2024-09-15",
+		"distanceKm": 7,
+		"durationSeconds": 1893
+	},
+	{
+		"name": "Saulėtekio maratonas 2024",
+		"distanceName": null,
+		"date": "2024-12-01",
+		"distanceKm": 12.6,
+		"durationSeconds": 3471
+	},
+	{
+		"name": "XXXIII tradicinis tarptautinis pagarbos bėgimas „Gyvybės ir Mirties keliu“",
+		"distanceName": null,
+		"date": "2025-01-11",
+		"distanceKm": 9,
+		"durationSeconds": 2950
+	},
+	{
+		"name": "If Vilniaus Pusmaratonis 2025",
+		"distanceName": null,
+		"date": "2025-05-24",
+		"distanceKm": 5,
+		"durationSeconds": 1300
+	},
+	{
+		"name": "„Vytautas Birštono pusmaratonis“",
+		"distanceName": null,
+		"date": "2025-06-14",
+		"distanceKm": 10,
+		"durationSeconds": 2870
+	},
+	{
+		"name": "Juozo Songailos bėgimas 2025",
+		"distanceName": null,
+		"date": "2025-09-07",
+		"distanceKm": 7,
+		"durationSeconds": 1934
+	},
+	{
+		"name": "Swedbank Vilniaus maratonas 2025",
+		"distanceName": "Half Marathon",
+		"date": "2025-09-14",
+		"distanceKm": 21.0975,
+		"durationSeconds": 6198
+	},
+	{
+		"name": "Saulėtekio maratonas 2025",
+		"distanceName": null,
+		"date": "2025-12-14",
+		"distanceKm": 12.6,
+		"durationSeconds": 3664
+	},
+	{
+		"name": "XXXIV tradicinis tarptautinis pagarbos bėgimas „Gyvybės ir Mirties keliu“",
+		"distanceName": null,
+		"date": "2026-01-10",
+		"distanceKm": 9,
+		"durationSeconds": 2978
+	},
+	{
+		"name": "Bėgimas „Vilkų takais“ 2026",
+		"distanceName": null,
+		"date": "2026-04-18",
+		"distanceKm": 5.2,
+		"durationSeconds": 1288
+	},
+	{
+		"name": "Kauno Akropolio maratonas 2026",
+		"distanceName": "Marathon",
+		"date": "2026-04-26",
+		"distanceKm": 42.195,
+		"durationSeconds": 13197
+	},
+	{
+		"name": "Swedbank Vilniaus maratonas 2026",
+		"distanceName": "Half Marathon",
+		"date": "2026-09-13",
+		"distanceKm": 21.0975,
+		"durationSeconds": 6303
+	}
+]
