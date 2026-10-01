@@ -1,0 +1,49 @@
+[
+  {
+    "title": "Japan",
+    "season": "Summer 2026",
+    "fromDate": "2026-08-11",
+    "toDate": "2026-08-27",
+    "cities": [
+      { "name": "Tokyo", "fromDate": "2026-08-12", "toDate": "2026-08-15" },
+      { "name": "Nikko", "fromDate": "2026-08-16", "toDate": "2026-08-16" },
+      { "name": "Hakone", "fromDate": "2026-08-17", "toDate": "2026-08-18" },
+      { "name": "Kyoto", "fromDate": "2026-08-19", "toDate": "2026-08-21" },
+      { "name": "Nara", "fromDate": "2026-08-22", "toDate": "2026-08-22" },
+      { "name": "Osaka", "fromDate": "2026-08-22", "toDate": "2026-08-24" },
+      { "name": "Kamakura", "fromDate": "2026-08-25", "toDate": "2026-08-25" },
+      { "name": "Fujiyoshida", "fromDate": "2026-08-26", "toDate": "2026-08-26" },
+      { "name": "Fujikawaguchiko", "fromDate": "2026-08-26", "toDate": "2026-08-26" },
+      { "name": "Fujinomiya", "fromDate": "2026-08-26", "toDate": "2026-08-26" },
+      { "name": "Fuji", "fromDate": "2026-08-26", "toDate": "2026-08-26" },
+      { "name": "Tokyo", "fromDate": "2026-08-27", "toDate": "2026-08-27" }
+    ]
+  },
+  {
+    "title": "Poland",
+    "season": "Summer 2026",
+    "fromDate": "2026-07-23",
+    "toDate": "2026-07-26",
+    "cities": [
+      { "name": "Sopot", "fromDate": "2026-07-23", "toDate": "2026-07-23" },
+      { "name": "Gdynia", "fromDate": "2026-07-24", "toDate": "2026-07-24" },
+      { "name": "Hel", "fromDate": "2026-07-25", "toDate": "2026-07-25" },
+      { "name": "Rewa", "fromDate": "2026-07-25", "toDate": "2026-07-25" },
+      { "name": "Jurata", "fromDate": "2026-07-25", "toDate": "2026-07-25" },
+      { "name": "Jastarnia", "fromDate": "2026-07-25", "toDate": "2026-07-25" },
+      { "name": "Wladyslawowo", "fromDate": "2026-07-25", "toDate": "2026-07-25" },
+      { "name": "Gdynia", "fromDate": "2026-07-26", "toDate": "2026-07-26" }
+    ]
+  },
+  {
+    "title": "Italy",
+    "season": "Winter 2026",
+    "fromDate": "2025-02-19",
+    "toDate": "2025-02-27",
+    "cities": [
+      { "name": "Rome", "fromDate": "2025-02-19", "toDate": "2025-02-22" },
+      { "name": "Pisa", "fromDate": "2025-02-23", "toDate": "2025-02-23" },
+      { "name": "Venice", "fromDate": "2025-02-24", "toDate": "2025-02-27" }
+    ]
+  }
+]
