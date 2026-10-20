@@ -60,8 +60,33 @@ export function ArchivePage({
   }
 
   const trips = sortTripsByDate(tripsResource.data)
+  const countryCount = new Set(
+    trips.flatMap((trip) => trip.country.map((country) => country.trim().toLocaleLowerCase())),
+  ).size
+  const cityCount = new Set(
+    trips.flatMap((trip) => trip.cities.map((city) => city.name.trim().toLocaleLowerCase())),
+  ).size
+
   return (
     <ArchiveLayout title="Trips">
+      {!tripsResource.isLoading && !tripsResource.hasError && (
+        <section className="trip-statistics" aria-label="Trip statistics">
+          <dl>
+            <div>
+              <dt>Total trips</dt>
+              <dd>{trips.length}</dd>
+            </div>
+            <div>
+              <dt>Countries visited</dt>
+              <dd>{countryCount}</dd>
+            </div>
+            <div>
+              <dt>Cities visited</dt>
+              <dd>{cityCount}</dd>
+            </div>
+          </dl>
+        </section>
+      )}
       <CollectionSection title="Trips" resource={tripsResource} items={trips} emptyMessage="No trips to show yet.">
         {(entries) => <TripCards trips={entries} />}
       </CollectionSection>

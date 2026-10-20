@@ -1,11 +1,14 @@
 export interface CityStay {
   name: string
+  group?: string
   fromDate: string | null
   toDate: string | null
 }
 
 export interface Trip {
-  title: string
+  title: string | null
+  country: string[]
+  region: string
   season: string
   fromDate: string | null
   toDate: string | null
@@ -26,6 +29,7 @@ function isCityStay(value: unknown): value is CityStay {
   return (
     'name' in value &&
     typeof value.name === 'string' &&
+    (!('group' in value) || typeof value.group === 'string') &&
     'fromDate' in value &&
     isDateOrNull(value.fromDate) &&
     'toDate' in value &&
@@ -37,8 +41,13 @@ function isTrip(value: unknown): value is Trip {
   if (typeof value !== 'object' || value === null) return false
 
   return (
+    'country' in value &&
+    Array.isArray(value.country) &&
+    value.country.every((country) => typeof country === 'string') &&
     'title' in value &&
-    typeof value.title === 'string' &&
+    (value.title === null || typeof value.title === 'string') &&
+    'region' in value &&
+    typeof value.region === 'string' &&
     'season' in value &&
     typeof value.season === 'string' &&
     'fromDate' in value &&

@@ -1,12 +1,22 @@
 import type { Trip } from '../data/tripsService'
-import { formatDateRange, groupCitiesByDate } from '../utils/dateFormatting'
+import { formatDateRange, getDateRangeDurationDays, groupCitiesByDate } from '../utils/dateFormatting'
 
 function TripCard({ trip }: { trip: Trip }) {
+  const durationDays = getDateRangeDurationDays(trip.fromDate, trip.toDate)
+
   return (
     <article className="trip-card">
-      <span className="trip-season">{trip.season}</span>
-      <h3>{trip.title}</h3>
-      <p className="trip-date-range">{formatDateRange(trip.fromDate, trip.toDate)}</p>
+      <div className="trip-meta">
+        <span className="trip-season">{trip.season} · {trip.region}</span>
+      </div>
+      <h3>{trip.country.join(', ')}</h3>
+      {trip.title && <p className="trip-title">{trip.title}</p>}
+      <div className="trip-date-block">
+        <p className="trip-date-range">{formatDateRange(trip.fromDate, trip.toDate)}</p>
+        {durationDays !== null && (
+          <p className="trip-duration">{durationDays} {durationDays === 1 ? 'day' : 'days'}</p>
+        )}
+      </div>
       <details className="trip-cities">
         <summary>Details ({trip.cities.length} stops)</summary>
         <ul className="trip-city-list">
@@ -18,7 +28,7 @@ function TripCard({ trip }: { trip: Trip }) {
                 <span className="city-date-range">{formatDateRange(fromDate, toDate)}</span>
                 {cityGroup.map((city, index) => (
                   <span className="city-name" key={`${city.name}-${index}`}>
-                    {city.name}
+                    {city.name}{city.group && <> <small className="city-group-label">({city.group})</small></>}
                   </span>
                 ))}
               </li>
@@ -33,7 +43,7 @@ function TripCard({ trip }: { trip: Trip }) {
 export function TripCards({ trips }: { trips: Trip[] }) {
   return (
     <div className="trip-grid">
-      {trips.map((trip) => <TripCard key={trip.title} trip={trip} />)}
+      {trips.map((trip) => <TripCard key={`${trip.country.join('-')}-${trip.fromDate}`} trip={trip} />)}
     </div>
   )
 }

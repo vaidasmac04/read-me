@@ -1,49 +1,683 @@
 [
   {
-    "title": "Japan",
+    "title": "Honeymoon",
+    "country": [
+      "Japan"
+    ],
+    "region": "Asia",
     "season": "Summer 2026",
     "fromDate": "2026-08-11",
     "toDate": "2026-08-27",
     "cities": [
-      { "name": "Tokyo", "fromDate": "2026-08-12", "toDate": "2026-08-15" },
-      { "name": "Nikko", "fromDate": "2026-08-16", "toDate": "2026-08-16" },
-      { "name": "Hakone", "fromDate": "2026-08-17", "toDate": "2026-08-18" },
-      { "name": "Kyoto", "fromDate": "2026-08-19", "toDate": "2026-08-21" },
-      { "name": "Nara", "fromDate": "2026-08-22", "toDate": "2026-08-22" },
-      { "name": "Osaka", "fromDate": "2026-08-22", "toDate": "2026-08-24" },
-      { "name": "Kamakura", "fromDate": "2026-08-25", "toDate": "2026-08-25" },
-      { "name": "Fujiyoshida", "fromDate": "2026-08-26", "toDate": "2026-08-26" },
-      { "name": "Fujikawaguchiko", "fromDate": "2026-08-26", "toDate": "2026-08-26" },
-      { "name": "Fujinomiya", "fromDate": "2026-08-26", "toDate": "2026-08-26" },
-      { "name": "Fuji", "fromDate": "2026-08-26", "toDate": "2026-08-26" },
-      { "name": "Tokyo", "fromDate": "2026-08-27", "toDate": "2026-08-27" }
+      {
+        "name": "Tokyo",
+        "fromDate": "2026-08-12",
+        "toDate": "2026-08-15"
+      },
+      {
+        "name": "Nikko",
+        "fromDate": "2026-08-16",
+        "toDate": "2026-08-16"
+      },
+      {
+        "name": "Hakone",
+        "fromDate": "2026-08-17",
+        "toDate": "2026-08-18"
+      },
+      {
+        "name": "Kyoto",
+        "fromDate": "2026-08-19",
+        "toDate": "2026-08-21"
+      },
+      {
+        "name": "Nara",
+        "fromDate": "2026-08-22",
+        "toDate": "2026-08-22"
+      },
+      {
+        "name": "Osaka",
+        "fromDate": "2026-08-22",
+        "toDate": "2026-08-24"
+      },
+      {
+        "name": "Kamakura",
+        "fromDate": "2026-08-25",
+        "toDate": "2026-08-25"
+      },
+      {
+        "name": "Fujiyoshida",
+        "fromDate": "2026-08-26",
+        "toDate": "2026-08-26"
+      },
+      {
+        "name": "Fujikawaguchiko",
+        "fromDate": "2026-08-26",
+        "toDate": "2026-08-26"
+      },
+      {
+        "name": "Fujinomiya",
+        "fromDate": "2026-08-26",
+        "toDate": "2026-08-26"
+      },
+      {
+        "name": "Fuji",
+        "fromDate": "2026-08-26",
+        "toDate": "2026-08-26"
+      },
+      {
+        "name": "Tokyo",
+        "fromDate": "2026-08-27",
+        "toDate": "2026-08-27"
+      }
     ]
   },
   {
-    "title": "Poland",
+    "title": null,
+    "country": [
+      "Poland"
+    ],
+    "region": "Europe",
     "season": "Summer 2026",
     "fromDate": "2026-07-23",
     "toDate": "2026-07-26",
     "cities": [
-      { "name": "Sopot", "fromDate": "2026-07-23", "toDate": "2026-07-23" },
-      { "name": "Gdynia", "fromDate": "2026-07-24", "toDate": "2026-07-24" },
-      { "name": "Hel", "fromDate": "2026-07-25", "toDate": "2026-07-25" },
-      { "name": "Rewa", "fromDate": "2026-07-25", "toDate": "2026-07-25" },
-      { "name": "Jurata", "fromDate": "2026-07-25", "toDate": "2026-07-25" },
-      { "name": "Jastarnia", "fromDate": "2026-07-25", "toDate": "2026-07-25" },
-      { "name": "Wladyslawowo", "fromDate": "2026-07-25", "toDate": "2026-07-25" },
-      { "name": "Gdynia", "fromDate": "2026-07-26", "toDate": "2026-07-26" }
+      {
+        "name": "Sopot",
+        "fromDate": "2026-07-23",
+        "toDate": "2026-07-23"
+      },
+      {
+        "name": "Gdynia",
+        "fromDate": "2026-07-24",
+        "toDate": "2026-07-24"
+      },
+      {
+        "name": "Hel",
+        "fromDate": "2026-07-25",
+        "toDate": "2026-07-25"
+      },
+      {
+        "name": "Rewa",
+        "fromDate": "2026-07-25",
+        "toDate": "2026-07-25"
+      },
+      {
+        "name": "Jurata",
+        "fromDate": "2026-07-25",
+        "toDate": "2026-07-25"
+      },
+      {
+        "name": "Jastarnia",
+        "fromDate": "2026-07-25",
+        "toDate": "2026-07-25"
+      },
+      {
+        "name": "Wladyslawowo",
+        "fromDate": "2026-07-25",
+        "toDate": "2026-07-25"
+      },
+      {
+        "name": "Gdynia",
+        "fromDate": "2026-07-26",
+        "toDate": "2026-07-26"
+      }
     ]
   },
   {
-    "title": "Italy",
-    "season": "Winter 2026",
-    "fromDate": "2025-02-19",
-    "toDate": "2025-02-27",
+    "title": "TrenkTuras Augustave'26",
+    "country": [
+      "Poland"
+    ],
+    "region": "Europe",
+    "season": "Spring 2026",
+    "fromDate": "2026-04-10",
+    "toDate": "2026-04-12",
     "cities": [
-      { "name": "Rome", "fromDate": "2025-02-19", "toDate": "2025-02-22" },
-      { "name": "Pisa", "fromDate": "2025-02-23", "toDate": "2025-02-23" },
-      { "name": "Venice", "fromDate": "2025-02-24", "toDate": "2025-02-27" }
+      {
+        "name": "Augustów",
+        "fromDate": "2026-04-10",
+        "toDate": "2026-04-12"
+      }
+    ]
+  },
+  {
+    "title": null,
+    "country": [
+      "Italy"
+    ],
+    "region": "Europe",
+    "season": "Winter 2026",
+    "fromDate": "2026-02-19",
+    "toDate": "2026-02-27",
+    "cities": [
+      {
+        "name": "Rome",
+        "fromDate": "2026-02-19",
+        "toDate": "2026-02-22"
+      },
+      {
+        "name": "Pisa",
+        "fromDate": "2026-02-23",
+        "toDate": "2026-02-23"
+      },
+      {
+        "name": "Venice",
+        "fromDate": "2026-02-24",
+        "toDate": "2026-02-27"
+      }
+    ]
+  },
+  {
+    "title": null,
+    "country": [
+      "Poland"
+    ],
+    "region": "Europe",
+    "season": "Winter 2026",
+    "fromDate": "2026-02-14",
+    "toDate": "2026-02-15",
+    "cities": [
+      {
+        "name": "Suwałki",
+        "fromDate": "2026-02-14",
+        "toDate": "2026-02-15"
+      }
+    ]
+  },
+  {
+    "title": null,
+    "country": [
+      "Latvia"
+    ],
+    "region": "Europe",
+    "season": "Winter 2026",
+    "fromDate": "2026-02-07",
+    "toDate": "2026-02-08",
+    "cities": [
+      {
+        "name": "Jelgava",
+        "fromDate": "2026-02-07",
+        "toDate": "2026-02-08"
+      }
+    ]
+  },
+  {
+    "title": null,
+    "country": [
+      "England"
+    ],
+    "region": "Europe",
+    "season": "Autumn 2025",
+    "fromDate": "2025-09-27",
+    "toDate": "2025-10-01",
+    "cities": [
+      {
+        "name": "London",
+        "fromDate": "2025-09-27",
+        "toDate": "2025-10-01"
+      }
+    ]
+  },
+  {
+    "title": null,
+    "country": [
+      "Latvia"
+    ],
+    "region": "Europe",
+    "season": "Summer 2025",
+    "fromDate": "2025-07-04",
+    "toDate": "2025-07-12",
+    "cities": [
+      {
+        "name": "Bauska",
+        "fromDate": "2025-07-04",
+        "toDate": "2025-07-04"
+      },
+      {
+        "name": "Sigulda",
+        "fromDate": "2025-07-04",
+        "toDate": "2025-07-05"
+      },
+      {
+        "name": "Jūrmala",
+        "fromDate": "2025-07-06",
+        "toDate": "2025-07-07"
+      },
+      {
+        "name": "Roja",
+        "fromDate": "2025-07-07",
+        "toDate": "2025-07-07"
+      },
+      {
+        "name": "Kolka",
+        "fromDate": "2025-07-07",
+        "toDate": "2025-07-07"
+      },
+      {
+        "name": "Ventspils",
+        "fromDate": "2025-07-07",
+        "toDate": "2025-07-09"
+      },
+      {
+        "name": "Kuldīga",
+        "fromDate": "2025-07-09",
+        "toDate": "2025-07-10"
+      },
+      {
+        "name": "Liepāja",
+        "fromDate": "2025-07-10",
+        "toDate": "2025-07-12"
+      }
+    ]
+  },
+  {
+    "title": null,
+    "country": [
+      "Norway"
+    ],
+    "region": "Europe",
+    "season": "Summer 2025",
+    "fromDate": "2025-06-17",
+    "toDate": "2025-06-25",
+    "cities": [
+      {
+        "name": "Oslo",
+        "fromDate": "2025-06-17",
+        "toDate": "2025-06-19"
+      },
+      {
+        "name": "Ålesund",
+        "fromDate": "2025-06-19",
+        "toDate": "2025-06-21"
+      },
+      {
+        "name": "Geiranger",
+        "fromDate": "2025-06-20",
+        "toDate": "2025-06-20"
+      },
+      {
+        "name": "Øye",
+        "fromDate": "2025-06-20",
+        "toDate": "2025-06-20"
+      },
+      {
+        "name": "Hellesylt",
+        "fromDate": "2025-06-20",
+        "toDate": "2025-06-20"
+      },
+      {
+        "name": "Bergen",
+        "fromDate": "2025-06-21",
+        "toDate": "2025-06-25"
+      }
+    ]
+  },
+  {
+    "title": "Didysis Baltijos kruizas",
+    "country": [
+      "Latvia",
+      "Estonia",
+      "Finland",
+      "Sweden"
+    ],
+    "region": "Europe",
+    "season": "Autumn 2025",
+    "fromDate": "2025-04-24",
+    "toDate": "2025-04-27",
+    "cities": [
+      {
+        "name": "Riga",
+        "fromDate": "2025-04-24",
+        "toDate": "2025-04-24"
+      },
+      {
+        "name": "Tallinn",
+        "fromDate": "2025-04-24",
+        "toDate": "2025-04-25"
+      },
+      {
+        "name": "Helsinki",
+        "fromDate": "2025-04-25",
+        "toDate": "2025-04-25"
+      },
+      {
+        "name": "Stockholm",
+        "fromDate": "2025-04-25",
+        "toDate": "2025-04-26"
+      },
+      {
+        "name": "Tallinn",
+        "fromDate": "2025-04-27",
+        "toDate": "2025-04-27"
+      }
+    ]
+  },
+  {
+    "title": null,
+    "country": [
+      "Spain"
+    ],
+    "region": "Europe",
+    "season": "Winter 2025",
+    "fromDate": "2025-02-01",
+    "toDate": "2025-02-08",
+    "cities": [
+      {
+        "name": "Madrid",
+        "fromDate": "2025-02-01",
+        "toDate": "2025-02-03"
+      },
+      {
+        "name": "Toledo ",
+        "fromDate": "2025-02-04",
+        "toDate": "2025-02-04"
+      },
+      {
+        "name": "Barcelona",
+        "fromDate": "2025-02-05",
+        "toDate": "2025-02-06"
+      },
+      {
+        "name": "Zaragoza",
+        "fromDate": "2025-02-07",
+        "toDate": "2025-02-07"
+      },
+      {
+        "name": "Madrid",
+        "fromDate": "2025-02-08",
+        "toDate": "2025-02-08"
+      }
+    ]
+  },
+  {
+    "title": "Christmas trip",
+    "country": [
+      "Poland"
+    ],
+    "region": "Europe",
+    "season": "Winter 2024",
+    "fromDate": "2024-12-14",
+    "toDate": "2024-12-15",
+    "cities": [
+      {
+        "name": "Gdansk",
+        "fromDate": "2024-12-14",
+        "toDate": "2024-12-15"
+      },
+      {
+        "name": "Malbork",
+        "fromDate": "2024-12-15",
+        "toDate": "2024-12-15"
+      }
+    ]
+  },
+  {
+    "title": null,
+    "country": [
+      "Greece"
+    ],
+    "region": "Europe",
+    "season": "Summer 2024",
+    "fromDate": "2024-06-20",
+    "toDate": "2024-06-30",
+    "cities": [
+      {
+        "name": "Athens",
+        "fromDate": "2024-06-20",
+        "toDate": "2024-06-24"
+      },
+      {
+        "name": "Kalabaka",
+        "fromDate": "2024-06-22",
+        "toDate": "2024-06-22"
+      },
+      {
+        "name": "Piraeus",
+        "fromDate": "2024-06-23",
+        "toDate": "2024-06-23"
+      },
+      {
+        "name": "Delphi",
+        "fromDate": "2024-06-24",
+        "toDate": "2024-06-24"
+      },
+      {
+        "name": "Fira",
+        "group": "Santorini",
+        "fromDate": "2024-06-25",
+        "toDate": "2024-06-25"
+      },
+      {
+        "name": "Imerovigli",
+        "group": "Santorini",
+        "fromDate": "2024-06-25",
+        "toDate": "2024-06-25"
+      },
+      {
+        "name": "Finikia",
+        "group": "Santorini",
+        "fromDate": "2024-06-25",
+        "toDate": "2024-06-25"
+      },
+      {
+        "name": "Oia",
+        "group": "Santorini",
+        "fromDate": "2024-06-25",
+        "toDate": "2024-06-25"
+      },
+      {
+        "name": "Megalochori",
+        "group": "Santorini",
+        "fromDate": "2024-06-26",
+        "toDate": "2024-06-26"
+      },
+      {
+        "name": "Akrotiri",
+        "group": "Santorini",
+        "fromDate": "2024-06-26",
+        "toDate": "2024-06-26"
+      },
+      {
+        "name": "Emporio",
+        "group": "Santorini",
+        "fromDate": "2024-06-27",
+        "toDate": "2024-06-27"
+      },
+      {
+        "name": "Perrisa",
+        "group": "Santorini",
+        "fromDate": "2024-06-27",
+        "toDate": "2024-06-27"
+      },
+      {
+        "name": "Athens",
+        "fromDate": "2024-06-28",
+        "toDate": "2024-06-29"
+      },
+      {
+        "name": "Corinth",
+        "fromDate": "2024-06-29",
+        "toDate": "2024-06-29"
+      },
+      {
+        "name": "Nafplio",
+        "fromDate": "2024-06-29",
+        "toDate": "2024-06-29"
+      },
+      {
+        "name": "Spata",
+        "fromDate": "2024-06-30",
+        "toDate": "2024-06-30"
+      }
+    ]
+  },
+  {
+    "title": "Work Trip",
+    "country": [
+      "Norway"
+    ],
+    "region": "Europe",
+    "season": "Winter 2024",
+    "fromDate": "2024-01-22",
+    "toDate": "2024-01-26",
+    "cities": [
+      {
+        "name": "Oslo",
+        "fromDate": "2024-01-22",
+        "toDate": "2024-01-26"
+      }
+    ]
+  },
+  {
+    "title": "Christmas trip",
+    "country": [
+      "Estonia",
+      "Latvia"
+    ],
+    "region": "Europe",
+    "season": "Winter 2023",
+    "fromDate": "2023-12-27",
+    "toDate": "2023-12-30",
+    "cities": [
+      {
+        "name": "Tallinn",
+        "fromDate": "2023-12-27",
+        "toDate": "2023-12-28"
+      },
+      {
+        "name": "Riga",
+        "fromDate": "2023-12-28",
+        "toDate": "2023-12-29"
+      },
+      {
+        "name": "Jūrmala",
+        "fromDate": "2023-12-29",
+        "toDate": "2023-12-29"
+      },
+      {
+        "name": "Riga",
+        "fromDate": "2023-12-29",
+        "toDate": "2023-12-30"
+      }
+    ]
+  },
+  {
+    "title": "Work Trip",
+    "country": [
+      "Norway"
+    ],
+    "region": "Europe",
+    "season": "Autumn 2023",
+    "fromDate": "2023-10-02",
+    "toDate": "2023-10-05",
+    "cities": [
+      {
+        "name": "Oslo",
+        "fromDate": "2023-10-02",
+        "toDate": "2023-10-05"
+      }
+    ]
+  },
+  {
+    "title": null,
+    "country": [
+      "Latvia"
+    ],
+    "region": "Europe",
+    "season": "Summer 2023",
+    "fromDate": "2023-08-05",
+    "toDate": "2023-08-06",
+    "cities": [
+      {
+        "name": "Jūrmala",
+        "fromDate": "2023-08-05",
+        "toDate": "2023-08-06"
+      }
+    ]
+  },
+  {
+    "title": "Work Trip",
+    "country": [
+      "Norway"
+    ],
+    "region": "Europe",
+    "season": "Spring 2023",
+    "fromDate": "2023-05-10",
+    "toDate": "2023-05-12",
+    "cities": [
+      {
+        "name": "Oslo",
+        "fromDate": "2023-05-10",
+        "toDate": "2023-05-12"
+      }
+    ]
+  },
+  {
+    "title": null,
+    "country": [
+      "Poland"
+    ],
+    "region": "Europe",
+    "season": "Spring 2023",
+    "fromDate": "2023-04-21",
+    "toDate": "2023-04-23",
+    "cities": [
+      {
+        "name": "Warsaw",
+        "fromDate": "2023-04-21",
+        "toDate": "2023-04-23"
+      }
+    ]
+  },
+  {
+    "title": "Work Trip",
+    "country": [
+      "Sweden"
+    ],
+    "region": "Europe",
+    "season": "Spring 2023",
+    "fromDate": "2023-03-13",
+    "toDate": "2023-03-15",
+    "cities": [
+      {
+        "name": "Gothenburg",
+        "fromDate": "2023-03-13",
+        "toDate": "2023-03-15"
+      }
+    ]
+  },
+   {
+    "title": null,
+    "country": [
+      "Latvia"
+    ],
+    "region": "Europe",
+    "season": "Winter 2023",
+    "fromDate": "2023-02-04",
+    "toDate": "2023-02-04",
+    "cities": [
+      {
+        "name": "Jelgava",
+        "fromDate": "2023-02-04",
+        "toDate": "2023-02-04"
+      }
+    ]
+  },
+  {
+    "title": "Work Trip",
+    "country": [
+      "Norway"
+    ],
+    "region": "Europe",
+    "season": "Winter 2022",
+    "fromDate": "2022-12-12",
+    "toDate": "2022-12-17",
+    "cities": [
+      {
+        "name": "Oslo",
+        "fromDate": "2022-12-12",
+        "toDate": "2022-12-17"
+      }
     ]
   }
 ]

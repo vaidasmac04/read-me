@@ -30,6 +30,16 @@ export function formatDateRange(fromDate: string | null, toDate: string | null):
   return 'Dates not added'
 }
 
+export function getDateRangeDurationDays(fromDate: string | null, toDate: string | null): number | null {
+  if (!fromDate || !toDate) return null
+
+  const start = new Date(`${fromDate}T00:00:00.000Z`).valueOf()
+  const end = new Date(`${toDate}T00:00:00.000Z`).valueOf()
+  if (end < start) return null
+
+  return Math.floor((end - start) / 86_400_000) + 1
+}
+
 export function formatDuration(durationSeconds: number): string {
   const hours = Math.floor(durationSeconds / 3600)
   const minutes = Math.floor((durationSeconds % 3600) / 60)
