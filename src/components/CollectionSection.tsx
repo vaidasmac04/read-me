@@ -5,6 +5,7 @@ export function CollectionSection<T>({
   title,
   href,
   actionLabel,
+  beforeContent,
   resource,
   items,
   emptyMessage,
@@ -13,6 +14,7 @@ export function CollectionSection<T>({
   title: string
   href?: string
   actionLabel?: string
+  beforeContent?: ReactNode
   resource: AsyncData<T[]>
   items: T[]
   emptyMessage: string
@@ -26,6 +28,7 @@ export function CollectionSection<T>({
           <a className="see-all-link" href={href}>{actionLabel}</a>
         )}
       </div>
+      {beforeContent}
       {resource.isLoading && <p className="resource-message" role="status">Loading {title.toLowerCase()}...</p>}
       {resource.hasError && <p className="resource-message" role="alert">{title} could not be loaded.</p>}
       {!resource.isLoading && !resource.hasError && items.length === 0 && (

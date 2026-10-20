@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { fetchHikes } from './data/hikesService'
 import { fetchJobs } from './data/jobsService'
 import { fetchRuns } from './data/runsService'
 import { fetchTrips } from './data/tripsService'
@@ -15,6 +16,7 @@ function App() {
   const jobsResource = useAsyncData(fetchJobs, [])
   const runsResource = useAsyncData(fetchRuns, [])
   const tripsResource = useAsyncData(fetchTrips, [])
+  const hikesResource = useAsyncData(fetchHikes, [])
   const [route, setRoute] = useState(getHashRoute)
 
   useEffect(() => {
@@ -27,14 +29,14 @@ function App() {
     return () => window.removeEventListener('hashchange', updateRoute)
   }, [])
 
-  const pageResources = { jobsResource, runsResource, tripsResource }
+  const pageResources = { jobsResource, runsResource, tripsResource, hikesResource }
 
   if (route === '/') {
     return <HomePage {...pageResources} />
   }
 
   const collection = route.slice(1)
-  if (collection === 'jobs' || collection === 'runs' || collection === 'trips') {
+  if (collection === 'jobs' || collection === 'runs' || collection === 'trips' || collection === 'hikes') {
     return <ArchivePage collection={collection as ArchiveCollection} {...pageResources} />
   }
 

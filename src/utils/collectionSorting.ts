@@ -2,6 +2,10 @@ export function sortRunsByDate<T extends { date: string }>(items: T[]): T[] {
   return [...items].sort((first, second) => second.date.localeCompare(first.date))
 }
 
+export function sortHikesByDate<T extends { date: string }>(items: T[]): T[] {
+  return [...items].sort((first, second) => second.date.localeCompare(first.date))
+}
+
 function getJobRecency(roles: { toDate: string | null }[]): string {
   return roles.reduce((latest, role) => {
     const roleEnd = role.toDate ?? '9999-12'

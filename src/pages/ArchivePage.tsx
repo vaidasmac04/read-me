@@ -1,19 +1,24 @@
 import type { ReactNode } from 'react'
+import type { Hike } from '../data/hikesService'
 import type { JobEntry } from '../data/jobsService'
 import type { Run } from '../data/runsService'
 import type { Trip } from '../data/tripsService'
 import type { AsyncData } from '../hooks/useAsyncData'
 import { CollectionSection } from '../components/CollectionSection'
+import { CollectionStatistics } from '../components/CollectionStatistics'
+import { HikeCards } from '../components/HikeCards'
 import { JobCards } from '../components/JobCards'
 import { RunCards } from '../components/RunCards'
 import { TripCards } from '../components/TripCards'
-import { sortJobsByDate, sortRunsByDate, sortTripsByDate } from '../utils/collectionSorting'
+import { sortHikesByDate, sortJobsByDate, sortRunsByDate, sortTripsByDate } from '../utils/collectionSorting'
+import { getHikeStatistics, getRunStatistics, getTripStatistics } from '../utils/collectionStatistics'
 
-export type ArchiveCollection = 'jobs' | 'runs' | 'trips'
+export type ArchiveCollection = 'jobs' | 'runs' | 'trips' | 'hikes'
 
 interface ArchivePageProps {
   collection: ArchiveCollection
   jobsResource: AsyncData<JobEntry[]>
+  hikesResource: AsyncData<Hike[]>
   runsResource: AsyncData<Run[]>
   tripsResource: AsyncData<Trip[]>
 }
@@ -34,6 +39,7 @@ function ArchiveLayout({ title, children }: { title: string; children: ReactNode
 export function ArchivePage({
   collection,
   jobsResource,
+  hikesResource,
   runsResource,
   tripsResource,
 }: ArchivePageProps) {
@@ -52,6 +58,9 @@ export function ArchivePage({
     const runs = sortRunsByDate(runsResource.data)
     return (
       <ArchiveLayout title="Runs">
+        {!runsResource.isLoading && !runsResource.hasError && (
+          <CollectionStatistics label="Run statistics" statistics={getRunStatistics(runs)} />
+        )}
         <CollectionSection title="Runs" resource={runsResource} items={runs} emptyMessage="No runs to show yet.">
           {(entries) => <RunCards runs={entries} />}
         </CollectionSection>
@@ -59,33 +68,27 @@ export function ArchivePage({
     )
   }
 
+  if (collection === 'hikes') {
+    const hikes = sortHikesByDate(hikesResource.data)
+
+    return (
+      <ArchiveLayout title="Hikes">
+        {!hikesResource.isLoading && !hikesResource.hasError && (
+          <CollectionStatistics label="Hike statistics" statistics={getHikeStatistics(hikes)} />
+        )}
+        <CollectionSection title="Hikes" resource={hikesResource} items={hikes} emptyMessage="No hikes to show yet.">
+          {(entries) => <HikeCards hikes={entries} />}
+        </CollectionSection>
+      </ArchiveLayout>
+    )
+  }
+
   const trips = sortTripsByDate(tripsResource.data)
-  const countryCount = new Set(
-    trips.flatMap((trip) => trip.country.map((country) => country.trim().toLocaleLowerCase())),
-  ).size
-  const cityCount = new Set(
-    trips.flatMap((trip) => trip.cities.map((city) => city.name.trim().toLocaleLowerCase())),
-  ).size
 
   return (
     <ArchiveLayout title="Trips">
       {!tripsResource.isLoading && !tripsResource.hasError && (
-        <section className="trip-statistics" aria-label="Trip statistics">
-          <dl>
-            <div>
-              <dt>Total trips</dt>
-              <dd>{trips.length}</dd>
-            </div>
-            <div>
-              <dt>Countries visited</dt>
-              <dd>{countryCount}</dd>
-            </div>
-            <div>
-              <dt>Cities visited</dt>
-              <dd>{cityCount}</dd>
-            </div>
-          </dl>
-        </section>
+        <CollectionStatistics label="Trip statistics" statistics={getTripStatistics(trips)} />
       )}
       <CollectionSection title="Trips" resource={tripsResource} items={trips} emptyMessage="No trips to show yet.">
         {(entries) => <TripCards trips={entries} />}

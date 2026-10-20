@@ -97,29 +97,29 @@
   line-height: 1.1;
 }
 
-.trip-statistics {
+.collection-statistics {
   margin: 0 8px 24px;
 }
 
-.trip-statistics dl {
+.collection-statistics dl {
   display: flex;
   flex-wrap: wrap;
   gap: 28px;
   margin: 0;
 }
 
-.trip-statistics dl > div {
+.collection-statistics dl > div {
   display: flex;
   align-items: baseline;
   gap: 8px;
 }
 
-.trip-statistics dt {
+.collection-statistics dt {
   color: #7d5f4d;
   font-size: 0.9rem;
 }
 
-.trip-statistics dd {
+.collection-statistics dd {
   margin: 0;
   color: #201812;
   font-size: 1.3rem;
@@ -167,11 +167,13 @@
 .trip-grid {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
+  align-items: stretch;
   gap: 20px;
 }
 
 .job-grid,
-.runs-grid {
+.runs-grid,
+.hikes-grid {
   display: grid;
   gap: 20px;
 }
@@ -188,6 +190,24 @@
 
 .runs-grid {
   grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.hikes-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.hike-card {
+  text-align: center;
+}
+
+.hike-card .hike-location {
+  color: #564a43;
+}
+
+.hike-card .hike-distance {
+  margin-top: 8px;
+  color: #3f684f;
+  font-weight: 700;
 }
 
 .trip-grid > .trip-card,
@@ -228,7 +248,6 @@
 .trip-card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .trip-card:hover,
@@ -415,7 +434,8 @@
   .about-grid,
   .trip-grid,
   .job-grid,
-  .runs-grid {
+  .runs-grid,
+  .hikes-grid {
     grid-template-columns: 1fr;
   }
 
