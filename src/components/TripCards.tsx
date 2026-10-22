@@ -1,4 +1,5 @@
 import type { Trip } from '../data/tripsService'
+import { getCountryFlagCode } from '../utils/countryFlagCodes'
 import { formatDateRange, getDateRangeDurationDays, groupCitiesByDate } from '../utils/dateFormatting'
 
 function TripCard({ trip }: { trip: Trip }) {
@@ -9,7 +10,18 @@ function TripCard({ trip }: { trip: Trip }) {
       <div className="trip-meta">
         <span className="trip-season">{trip.season} · {trip.region}</span>
       </div>
-      <h3>{trip.country.join(', ')}</h3>
+      <h3>
+        {trip.country.map((country) => {
+          const flagCode = getCountryFlagCode(country)
+
+          return (
+            <span className="trip-country" key={country}>
+              {flagCode && <span className={`fi fi-${flagCode} trip-country-flag`} aria-hidden="true" />}
+              {country}
+            </span>
+          )
+        })}
+      </h3>
       {trip.title && <p className="trip-title">{trip.title}</p>}
       <div className="trip-date-block">
         <p className="trip-date-range">{formatDateRange(trip.fromDate, trip.toDate)}</p>
