@@ -11,7 +11,7 @@ import { JobCards } from '../components/JobCards'
 import { RunCards } from '../components/RunCards'
 import { TripCards } from '../components/TripCards'
 import { sortHikesByDate, sortJobsByDate, sortRunsByDate, sortTripsByDate } from '../utils/collectionSorting'
-import { getHikeStatistics, getRunStatistics, getTripStatistics } from '../utils/collectionStatistics'
+import { getHikeStatistics, getLongestHikeStatistics, getRunBestResults, getRunStatistics, getTripStatistics } from '../utils/collectionStatistics'
 
 export type ArchiveCollection = 'jobs' | 'runs' | 'trips' | 'hikes'
 
@@ -59,7 +59,18 @@ export function ArchivePage({
     return (
       <ArchiveLayout title="Runs">
         {!runsResource.isLoading && !runsResource.hasError && (
-          <CollectionStatistics label="Run statistics" statistics={getRunStatistics(runs)} />
+          <>
+            <CollectionStatistics
+              label="Run overview"
+              heading="Overview"
+              statistics={getRunStatistics(runs)}
+            />
+            <CollectionStatistics
+              label="Run best results"
+              heading="Best results"
+              statistics={getRunBestResults(runs)}
+            />
+          </>
         )}
         <CollectionSection title="Runs" resource={runsResource} items={runs} emptyMessage="No runs to show yet.">
           {(entries) => <RunCards runs={entries} />}
@@ -74,7 +85,18 @@ export function ArchivePage({
     return (
       <ArchiveLayout title="Hikes">
         {!hikesResource.isLoading && !hikesResource.hasError && (
-          <CollectionStatistics label="Hike statistics" statistics={getHikeStatistics(hikes)} />
+          <>
+            <CollectionStatistics
+              label="Hike overview"
+              heading="Overview"
+              statistics={getHikeStatistics(hikes)}
+            />
+            <CollectionStatistics
+              label="Hike records"
+              heading="Records"
+              statistics={getLongestHikeStatistics(hikes)}
+            />
+          </>
         )}
         <CollectionSection title="Hikes" resource={hikesResource} items={hikes} emptyMessage="No hikes to show yet.">
           {(entries) => <HikeCards hikes={entries} />}
@@ -88,7 +110,11 @@ export function ArchivePage({
   return (
     <ArchiveLayout title="Trips">
       {!tripsResource.isLoading && !tripsResource.hasError && (
-        <CollectionStatistics label="Trip statistics" statistics={getTripStatistics(trips)} />
+        <CollectionStatistics
+          label="Trip overview"
+          heading="Overview"
+          statistics={getTripStatistics(trips)}
+        />
       )}
       <CollectionSection title="Trips" resource={tripsResource} items={trips} emptyMessage="No trips to show yet.">
         {(entries) => <TripCards trips={entries} />}

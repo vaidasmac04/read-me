@@ -101,9 +101,22 @@
   margin: 0 8px 24px;
 }
 
+.collection-statistics-heading {
+  width: fit-content;
+  margin: 0 auto 16px;
+  padding-bottom: 2px;
+  border-bottom: 2px solid #3f684f;
+  color: #3f684f;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 .collection-statistics dl {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 28px;
   margin: 0;
 }
@@ -111,7 +124,9 @@
 .collection-statistics dl > div {
   display: flex;
   align-items: baseline;
+  justify-content: center;
   gap: 8px;
+  text-align: center;
 }
 
 .collection-statistics dt {
@@ -194,6 +209,87 @@
 
 .hikes-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.collection-carousel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.collection-carousel-button {
+  display: grid;
+  place-items: center;
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid #d9cbbb;
+  border-radius: 50%;
+  background: #fffdfb;
+  color: #3f684f;
+  font: inherit;
+  cursor: pointer;
+}
+
+.collection-carousel-button:hover {
+  background: #f0ebe4;
+}
+
+.collection-carousel-button:disabled {
+  color: #b8afa5;
+  cursor: default;
+}
+
+.collection-carousel-button:disabled:hover {
+  background: #fffdfb;
+}
+
+.collection-carousel-button:focus-visible,
+.collection-carousel-viewport:focus-visible {
+  outline: 2px solid #3f684f;
+  outline-offset: 3px;
+}
+
+.carousel-chevron {
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+}
+
+.carousel-chevron-previous {
+  transform: rotate(225deg);
+}
+
+.carousel-chevron-next {
+  transform: rotate(45deg);
+}
+
+.collection-carousel-viewport {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.collection-carousel-viewport::-webkit-scrollbar {
+  display: none;
+}
+
+.collection-carousel-viewport > div {
+  display: flex;
+  gap: 20px;
+}
+
+.collection-carousel-viewport > div > .entry-card,
+.collection-carousel-viewport > div > .trip-card {
+  flex: 0 0 calc((100% - 40px) / 3);
+  box-sizing: border-box;
+  min-width: 0;
+  scroll-snap-align: start;
 }
 
 .hike-card {
@@ -455,6 +551,40 @@
   .runs-grid,
   .hikes-grid {
     grid-template-columns: 1fr;
+  }
+
+  .carousel-chevron-previous {
+    transform: rotate(135deg);
+  }
+
+  .carousel-chevron-next {
+    transform: rotate(-45deg);
+  }
+
+  .collection-carousel-viewport {
+    max-height: 460px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+  }
+
+  .collection-carousel-viewport > div {
+    flex-direction: column;
+  }
+
+  .collection-carousel-viewport > div > .entry-card,
+  .collection-carousel-viewport > div > .trip-card {
+    flex-basis: auto;
+    width: 100%;
+  }
+
+  .collection-carousel {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .collection-carousel-button {
+    flex-basis: 40px;
   }
 
   .trip-grid > .trip-card,

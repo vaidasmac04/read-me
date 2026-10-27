@@ -10,7 +10,7 @@ import { JobCards } from '../components/JobCards'
 import { RunCards } from '../components/RunCards'
 import { TripCards } from '../components/TripCards'
 import { sortHikesByDate, sortJobsByDate, sortRunsByDate, sortTripsByDate } from '../utils/collectionSorting'
-import { getHikeStatistics, getRunStatistics, getTripStatistics } from '../utils/collectionStatistics'
+import { getHikeStatistics, getLongestHikeStatistics, getRunBestResults, getRunStatistics, getTripStatistics } from '../utils/collectionStatistics'
 
 interface HomePageProps {
   jobsResource: AsyncData<JobEntry[]>
@@ -20,10 +20,10 @@ interface HomePageProps {
 }
 
 export function HomePage({ jobsResource, hikesResource, runsResource, tripsResource }: HomePageProps) {
-  const jobs = sortJobsByDate(jobsResource.data).slice(0, 3)
-  const hikes = sortHikesByDate(hikesResource.data).slice(0, 3)
-  const runs = sortRunsByDate(runsResource.data).slice(0, 3)
-  const trips = sortTripsByDate(tripsResource.data).slice(0, 3)
+  const jobs = sortJobsByDate(jobsResource.data)
+  const hikes = sortHikesByDate(hikesResource.data)
+  const runs = sortRunsByDate(runsResource.data)
+  const trips = sortTripsByDate(tripsResource.data)
 
   return (
     <main className="page-shell">
@@ -39,7 +39,7 @@ export function HomePage({ jobsResource, hikesResource, runsResource, tripsResou
         </div>
       </section>
 
-      <CollectionSection title="Jobs" href="#/jobs" actionLabel="See all jobs" resource={jobsResource} items={jobs} emptyMessage="No jobs to show yet.">
+      <CollectionSection title="Jobs" href="#/jobs" actionLabel="See all jobs" resource={jobsResource} items={jobs} emptyMessage="No jobs to show yet." enableCardNavigation>
         {(entries) => <JobCards entries={entries} />}
       </CollectionSection>
       <CollectionSection
@@ -49,8 +49,13 @@ export function HomePage({ jobsResource, hikesResource, runsResource, tripsResou
         resource={tripsResource}
         items={trips}
         emptyMessage="No trips to show yet."
+        enableCardNavigation
         beforeContent={!tripsResource.isLoading && !tripsResource.hasError
-          ? <CollectionStatistics label="Trip statistics" statistics={getTripStatistics(tripsResource.data)} />
+          ? <CollectionStatistics
+            label="Trip overview"
+            heading="Overview"
+            statistics={getTripStatistics(tripsResource.data)}
+          />
           : null}
       >
         {(entries) => <TripCards trips={entries} />}
@@ -62,8 +67,20 @@ export function HomePage({ jobsResource, hikesResource, runsResource, tripsResou
         resource={hikesResource}
         items={hikes}
         emptyMessage="No hikes to show yet."
+        enableCardNavigation
         beforeContent={!hikesResource.isLoading && !hikesResource.hasError
-          ? <CollectionStatistics label="Hike statistics" statistics={getHikeStatistics(hikesResource.data)} />
+          ? <>
+            <CollectionStatistics
+              label="Hike overview"
+              heading="Overview"
+              statistics={getHikeStatistics(hikesResource.data)}
+            />
+            <CollectionStatistics
+              label="Hike records"
+              heading="Records"
+              statistics={getLongestHikeStatistics(hikesResource.data)}
+            />
+          </>
           : null}
       >
         {(entries) => <HikeCards hikes={entries} />}
@@ -75,8 +92,20 @@ export function HomePage({ jobsResource, hikesResource, runsResource, tripsResou
         resource={runsResource}
         items={runs}
         emptyMessage="No runs to show yet."
+        enableCardNavigation
         beforeContent={!runsResource.isLoading && !runsResource.hasError
-          ? <CollectionStatistics label="Run statistics" statistics={getRunStatistics(runsResource.data)} />
+          ? <>
+            <CollectionStatistics
+              label="Run overview"
+              heading="Overview"
+              statistics={getRunStatistics(runsResource.data)}
+            />
+            <CollectionStatistics
+              label="Run best results"
+              heading="Best results"
+              statistics={getRunBestResults(runsResource.data)}
+            />
+          </>
           : null}
       >
         {(entries) => <RunCards runs={entries} />}
