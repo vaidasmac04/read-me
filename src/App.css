@@ -554,11 +554,11 @@
   }
 
   .carousel-chevron-previous {
-    transform: rotate(135deg);
+    transform: rotate(-45deg);
   }
 
   .carousel-chevron-next {
-    transform: rotate(-45deg);
+    transform: rotate(135deg);
   }
 
   .collection-carousel-viewport {
