@@ -15,17 +15,6 @@
 			}
 		]
 	},
-	{
-		"company": "Associate Software Engineer",
-		"description": "Worked on the migration of fee calculation systems codebase to new platform, designing data pipelines to ingest, transform, and visualize user payments data.",
-		"roles": [
-			{
-				"title": "Associate Software Engineer",
-				"fromDate": "2023-05",
-				"toDate": "2023-11"
-			}
-		]
-	},
     {
 		"company": "Vipps MobilePay",
 		"description": "Worked on the migration of fee calculation systems codebase to new platform, designing data pipelines to ingest, transform, and visualize user payments data.",

@@ -1,5 +1,12 @@
 [
     {
+        "title": "Pagramančio žygis",
+        "city": "Pagramantis",
+        "country": "Lithuania",
+        "date": "2026-10-24",
+        "distanceKm": 32
+    },
+    {
         "title": "Toyota ėjimas",
         "city": "Vilnius",
         "country": "Lithuania",
