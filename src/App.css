@@ -312,6 +312,12 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+@media (min-width: 769px) {
+  .hikes-grid > .hike-card:last-child:nth-child(3n + 1) {
+    grid-column: 2;
+  }
+}
+
 .collection-carousel {
   display: flex;
   align-items: center;
