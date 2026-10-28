@@ -8,6 +8,7 @@ import { CollectionSection } from '../components/CollectionSection'
 import { CollectionStatistics } from '../components/CollectionStatistics'
 import { HikeCards } from '../components/HikeCards'
 import { JobCards } from '../components/JobCards'
+import { PlacesVisited } from '../components/PlacesVisited'
 import { RunCards } from '../components/RunCards'
 import { TripCards } from '../components/TripCards'
 import { TripsMap } from '../components/TripsMap'
@@ -118,6 +119,7 @@ export function ArchivePage({
             statistics={getTripStatistics(trips)}
           />
           {trips.length > 0 && <TripsMap trips={trips} />}
+          {trips.length > 0 && <PlacesVisited trips={trips} />}
         </>
       )}
       <CollectionSection title="Trips" resource={tripsResource} items={trips} emptyMessage="No trips to show yet.">

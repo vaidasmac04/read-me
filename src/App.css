@@ -151,6 +151,82 @@
   height: auto;
 }
 
+.places-visited-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 24px 32px;
+}
+
+.places-country {
+  min-width: 0;
+}
+
+.places-country[open] {
+  grid-column: 1 / -1;
+}
+
+.places-country summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  list-style: none;
+  color: #201812;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+}
+
+.places-country summary::-webkit-details-marker {
+  display: none;
+}
+
+.places-country-toggle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: #7d5f4d;
+}
+
+.places-city-count {
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.places-country-chevron {
+  width: 7px;
+  height: 7px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform 140ms ease;
+}
+
+.places-country[open] .places-country-chevron {
+  transform: translateY(2px) rotate(225deg);
+}
+
+.places-country summary .fi {
+  flex: 0 0 auto;
+}
+
+.places-country ul {
+  display: grid;
+  gap: 5px;
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  color: #564a43;
+  text-align: center;
+}
+
+.places-country[open] ul {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
 .trips-map-country {
   fill: #dfe5df;
   stroke: #fffdfb;

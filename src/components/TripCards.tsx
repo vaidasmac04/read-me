@@ -30,7 +30,7 @@ function TripCard({ trip }: { trip: Trip }) {
         )}
       </div>
       <details className="trip-cities">
-        <summary>Details ({trip.cities.length} stops)</summary>
+        <summary>Details ({trip.cities.length} {trip.cities.length === 1 ? 'stop' : 'stops'})</summary>
         <ul className="trip-city-list">
           {groupCitiesByDate(trip.cities).map((cityGroup) => {
             const { fromDate, toDate } = cityGroup[0]
