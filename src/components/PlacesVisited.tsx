@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import type { Trip } from '../data/tripsService'
 import { getCountryFlagCode } from '../utils/countryFlagCodes'
+import { normalizeCountryName } from '../utils/countryNames'
 
 function getPlacesByCountry(trips: Trip[]) {
   const placesByCountry = new Map<string, Set<string>>()
@@ -25,17 +26,30 @@ function getPlacesByCountry(trips: Trip[]) {
     .sort((first, second) => first.country.localeCompare(second.country))
 }
 
-export function PlacesVisited({ trips }: { trips: Trip[] }) {
+export function PlacesVisited({
+  trips,
+  selectedCountry,
+}: {
+  trips: Trip[]
+  selectedCountry: string | null
+}) {
   const countries = getPlacesByCountry(trips)
   const [expandedCountry, setExpandedCountry] = useState<string | null>(null)
 
   if (countries.length === 0) return null
-  const visibleCountries = expandedCountry
-    ? countries.filter(({ country }) => country === expandedCountry)
-    : countries
+  const visibleCountries = countries.filter(({ country }) =>
+    (selectedCountry === null || normalizeCountryName(country) === normalizeCountryName(selectedCountry))
+    && (expandedCountry === null || country === expandedCountry),
+  )
 
   return (
-    <section className="content-section places-visited-section" aria-label="Places visited by country">
+    <section
+      className="content-section places-visited-section"
+      aria-label={selectedCountry ? `Cities visited in ${selectedCountry}` : 'Countries'}
+    >
+      <div className="section-heading">
+        <p className="section-kicker">Countries</p>
+      </div>
       <div className="places-visited-grid">
         {visibleCountries.map(({ country, cities }) => {
           const flagCode = getCountryFlagCode(country)

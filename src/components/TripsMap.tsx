@@ -1,21 +1,28 @@
 import { ComposableMap, Geography, Geographies, Graticule, Sphere } from 'react-simple-maps'
 import worldCountries from 'world-atlas/countries-110m.json?url'
 import type { Trip } from '../data/tripsService'
+import { normalizeCountryName } from '../utils/countryNames'
 
-const countryAliases: Record<string, string> = {
-  england: 'united kingdom',
-}
-
-function normalizeCountryName(country: string): string {
-  const normalizedCountry = country.trim().toLowerCase()
-  return countryAliases[normalizedCountry] ?? normalizedCountry
-}
-
-export function TripsMap({ trips }: { trips: Trip[] }) {
+export function TripsMap({
+  trips,
+  selectedCountry,
+  onCountrySelect,
+}: {
+  trips: Trip[]
+  selectedCountry: string | null
+  onCountrySelect: (country: string) => void
+}) {
   const visitedCountries = new Set(
     trips.flatMap((trip) => trip.country.map(normalizeCountryName)),
   )
   const visitedCountryNames = [...visitedCountries].sort()
+  const tripCountsByCountry = new Map<string, number>()
+
+  trips.forEach((trip) => {
+    new Set(trip.country.map(normalizeCountryName)).forEach((country) => {
+      tripCountsByCountry.set(country, (tripCountsByCountry.get(country) ?? 0) + 1)
+    })
+  })
 
   return (
     <section className="trips-map-section" aria-label="Visited countries map">
@@ -26,7 +33,7 @@ export function TripsMap({ trips }: { trips: Trip[] }) {
           height={400}
           projection="geoNaturalEarth1"
           projectionConfig={{ scale: 145 }}
-          role="img"
+          role="group"
           aria-label={`World map. Visited countries: ${visitedCountryNames.join(', ')}`}
         >
           <Sphere fill="#f1f4ef" stroke="#d7dfd8" strokeWidth={0.8} />
@@ -34,16 +41,34 @@ export function TripsMap({ trips }: { trips: Trip[] }) {
           <Geographies geography={worldCountries}>
             {({ geographies }) => geographies.map((geography) => {
               const countryName = geography.properties?.name
-              const isVisited = typeof countryName === 'string'
-                && visitedCountries.has(normalizeCountryName(countryName))
+              const normalizedCountry = typeof countryName === 'string'
+                ? normalizeCountryName(countryName)
+                : null
+              const isVisited = normalizedCountry !== null && visitedCountries.has(normalizedCountry)
+              const isSelected = normalizedCountry === normalizeCountryName(selectedCountry ?? '')
+              const tripCount = normalizedCountry === null ? 0 : tripCountsByCountry.get(normalizedCountry) ?? 0
+              const label = `${countryName ?? 'Unknown country'}: ${tripCount} ${tripCount === 1 ? 'trip' : 'trips'}`
 
               return (
                 <Geography
                   key={geography.rsmKey}
                   geography={geography}
-                  className={`trips-map-country${isVisited ? ' is-visited' : ''}`}
+                  className={`trips-map-country${isVisited ? ' is-visited is-selectable' : ''}${isSelected ? ' is-selected' : ''}`}
+                  role={isVisited ? 'button' : undefined}
+                  tabIndex={isVisited ? 0 : undefined}
+                  aria-label={isVisited ? `${label}. Activate to filter trips.` : undefined}
+                  aria-pressed={isVisited ? isSelected : undefined}
+                  onClick={isVisited && typeof countryName === 'string' ? () => onCountrySelect(countryName) : undefined}
+                  onKeyDown={isVisited && typeof countryName === 'string'
+                    ? (event) => {
+                      if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault()
+                        onCountrySelect(countryName)
+                      }
+                    }
+                    : undefined}
                 >
-                  <title>{`${countryName ?? 'Unknown country'}${isVisited ? ' · Visited' : ''}`}</title>
+                  <title>{label}</title>
                 </Geography>
               )
             })}

@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react'
+import { useState, type ReactNode } from 'react'
 import type { Hike } from '../data/hikesService'
 import type { JobEntry } from '../data/jobsService'
 import type { Run } from '../data/runsService'
@@ -12,6 +12,7 @@ import { PlacesVisited } from '../components/PlacesVisited'
 import { RunCards } from '../components/RunCards'
 import { TripCards } from '../components/TripCards'
 import { TripsMap } from '../components/TripsMap'
+import { normalizeCountryName } from '../utils/countryNames'
 import { sortHikesByDate, sortJobsByDate, sortRunsByDate, sortTripsByDate } from '../utils/collectionSorting'
 import { getHikeStatistics, getLongestHikeStatistics, getRunBestResults, getRunStatistics, getTripStatistics } from '../utils/collectionStatistics'
 
@@ -107,7 +108,17 @@ export function ArchivePage({
     )
   }
 
+  return <TripsArchive tripsResource={tripsResource} />
+}
+
+function TripsArchive({ tripsResource }: { tripsResource: AsyncData<Trip[]> }) {
   const trips = sortTripsByDate(tripsResource.data)
+  const [selectedCountry, setSelectedCountry] = useState<string | null>(null)
+  const filteredTrips = selectedCountry === null
+    ? trips
+    : trips.filter((trip) => trip.country.some(
+      (country) => normalizeCountryName(country) === normalizeCountryName(selectedCountry),
+    ))
 
   return (
     <ArchiveLayout title="Trips">
@@ -118,11 +129,34 @@ export function ArchivePage({
             heading="Overview"
             statistics={getTripStatistics(trips)}
           />
-          {trips.length > 0 && <TripsMap trips={trips} />}
-          {trips.length > 0 && <PlacesVisited trips={trips} />}
+          {trips.length > 0 && (
+            <TripsMap
+              trips={trips}
+              selectedCountry={selectedCountry}
+              onCountrySelect={(country) => setSelectedCountry((current) => current === country ? null : country)}
+            />
+          )}
         </>
       )}
-      <CollectionSection title="Trips" resource={tripsResource} items={trips} emptyMessage="No trips to show yet.">
+      {selectedCountry && (
+        <div className="trips-map-filter" role="status">
+          <span>Showing {filteredTrips.length} {filteredTrips.length === 1 ? 'trip' : 'trips'} in <strong>{selectedCountry}</strong></span>
+          <button type="button" onClick={() => setSelectedCountry(null)}>Clear filter</button>
+        </div>
+      )}
+      {!tripsResource.isLoading && !tripsResource.hasError && trips.length > 0 && (
+        <PlacesVisited
+          key={selectedCountry ?? 'all-countries'}
+          trips={trips}
+          selectedCountry={selectedCountry}
+        />
+      )}
+      <CollectionSection
+        title="Trips"
+        resource={tripsResource}
+        items={filteredTrips}
+        emptyMessage={selectedCountry ? `No trips found in ${selectedCountry}.` : 'No trips to show yet.'}
+      >
         {(entries) => <TripCards trips={entries} />}
       </CollectionSection>
     </ArchiveLayout>

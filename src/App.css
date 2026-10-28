@@ -157,6 +157,10 @@
   gap: 24px 32px;
 }
 
+.places-visited-section .section-heading {
+  text-align: left;
+}
+
 .places-country {
   min-width: 0;
 }
@@ -238,8 +242,47 @@
   fill: #72a983;
 }
 
+.trips-map-country.is-selectable {
+  cursor: pointer;
+}
+
+.trips-map-country.is-selected {
+  fill: #c38a53;
+}
+
+.trips-map-country:focus-visible {
+  stroke: #201812;
+  stroke-width: 1.8px;
+}
+
 .trips-map-country:hover {
   fill: #c38a53;
+}
+
+.trips-map-filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 8px 20px;
+  color: #564a43;
+}
+
+.trips-map-filter button {
+  padding: 4px 0;
+  border: 0;
+  background: none;
+  color: #3f684f;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.trips-map-filter button:focus-visible {
+  outline: 2px solid #3f684f;
+  outline-offset: 3px;
 }
 
 .section-heading h2 {
@@ -738,5 +781,9 @@
 
   .trips-map-summary {
     gap: 10px;
+  }
+
+  .trips-map-filter {
+    align-items: flex-start;
   }
 }
