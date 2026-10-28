@@ -7,6 +7,7 @@ export interface JobRole {
 export interface JobEntry {
   company: string
   description: string
+  skills: string[]
   roles: JobRole[]
 }
 
@@ -35,6 +36,10 @@ function isJobEntry(value: unknown): value is JobEntry {
     typeof value.company === 'string' &&
     'description' in value &&
     typeof value.description === 'string' &&
+    'skills' in value &&
+    Array.isArray(value.skills) &&
+    value.skills.length > 0 &&
+    value.skills.every((skill) => typeof skill === 'string') &&
     'roles' in value &&
     Array.isArray(value.roles) &&
     value.roles.length > 0 &&

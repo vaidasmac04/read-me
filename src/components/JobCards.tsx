@@ -14,6 +14,9 @@ function JobCard({ entry }: { entry: JobEntry }) {
         ))}
       </ul>
       <p className="entry-description">{entry.description}</p>
+      <ul className="job-skill-list" aria-label={`${entry.company} skills`}>
+        {entry.skills.map((skill) => <li key={skill}>{skill}</li>)}
+      </ul>
     </article>
   )
 }
