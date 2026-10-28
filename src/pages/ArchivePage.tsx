@@ -10,6 +10,7 @@ import { HikeCards } from '../components/HikeCards'
 import { JobCards } from '../components/JobCards'
 import { RunCards } from '../components/RunCards'
 import { TripCards } from '../components/TripCards'
+import { TripsMap } from '../components/TripsMap'
 import { sortHikesByDate, sortJobsByDate, sortRunsByDate, sortTripsByDate } from '../utils/collectionSorting'
 import { getHikeStatistics, getLongestHikeStatistics, getRunBestResults, getRunStatistics, getTripStatistics } from '../utils/collectionStatistics'
 
@@ -110,11 +111,14 @@ export function ArchivePage({
   return (
     <ArchiveLayout title="Trips">
       {!tripsResource.isLoading && !tripsResource.hasError && (
-        <CollectionStatistics
-          label="Trip overview"
-          heading="Overview"
-          statistics={getTripStatistics(trips)}
-        />
+        <>
+          <CollectionStatistics
+            label="Trip overview"
+            heading="Overview"
+            statistics={getTripStatistics(trips)}
+          />
+          {trips.length > 0 && <TripsMap trips={trips} />}
+        </>
       )}
       <CollectionSection title="Trips" resource={tripsResource} items={trips} emptyMessage="No trips to show yet.">
         {(entries) => <TripCards trips={entries} />}

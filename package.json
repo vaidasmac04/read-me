@@ -14,7 +14,9 @@
   "dependencies": {
     "flag-icons": "^7.6.0",
     "react": "^19.2.8",
-    "react-dom": "^19.2.8"
+    "react-dom": "^19.2.8",
+    "react-simple-maps": "^5.0.5",
+    "world-atlas": "^2.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.29.7",

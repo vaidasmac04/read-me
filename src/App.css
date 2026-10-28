@@ -141,6 +141,31 @@
   font-weight: 700;
 }
 
+.trips-map-frame {
+  margin: 0;
+}
+
+.trips-map-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.trips-map-country {
+  fill: #dfe5df;
+  stroke: #fffdfb;
+  stroke-width: 0.65px;
+  transition: fill 140ms ease;
+}
+
+.trips-map-country.is-visited {
+  fill: #72a983;
+}
+
+.trips-map-country:hover {
+  fill: #c38a53;
+}
+
 .section-heading h2 {
   margin: 0;
   font-size: clamp(1.9rem, 3vw, 2.7rem);
@@ -605,5 +630,9 @@
 
   .archive-header h1 {
     font-size: 36px;
+  }
+
+  .trips-map-summary {
+    gap: 10px;
   }
 }

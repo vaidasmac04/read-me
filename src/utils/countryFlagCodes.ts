@@ -11,6 +11,7 @@ const countryFlagCodes: Record<string, string> = {
   Poland: 'pl',
   Spain: 'es',
   Sweden: 'se',
+  Ukraine: 'ua',
 }
 
 export function getCountryFlagCode(country: string): string | undefined {

@@ -679,5 +679,22 @@
         "toDate": "2022-12-17"
       }
     ]
+  },
+  {
+    "title": null,
+    "country": [
+      "Ukraine"
+    ],
+    "region": "Europe",
+    "season": "Spring 2018",
+    "fromDate": "2018-04-26",
+    "toDate": "2018-04-29",
+    "cities": [
+      {
+        "name": "Lviv",
+        "fromDate": "2018-04-26",
+        "toDate": "2018-04-29"
+      }
+    ]
   }
 ]
