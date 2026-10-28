@@ -13,7 +13,7 @@ import { RunCards } from '../components/RunCards'
 import { TripCards } from '../components/TripCards'
 import { TripsMap } from '../components/TripsMap'
 import { sortHikesByDate, sortJobsByDate, sortRunsByDate, sortTripsByDate } from '../utils/collectionSorting'
-import { getHikeStatistics, getLongestHikeStatistics, getRunBestResults, getRunStatistics, getTripStatistics } from '../utils/collectionStatistics'
+import { getHikeStatistics, getLongestHikeStatistics, getRunBestResults, getRunDistanceCounts, getRunStatistics, getTripStatistics } from '../utils/collectionStatistics'
 
 export type ArchiveCollection = 'jobs' | 'runs' | 'trips' | 'hikes'
 
@@ -71,6 +71,11 @@ export function ArchivePage({
               label="Run best results"
               heading="Best results"
               statistics={getRunBestResults(runs)}
+            />
+            <CollectionStatistics
+              label="Run counts by distance"
+              heading="Runs by distance"
+              statistics={getRunDistanceCounts(runs)}
             />
           </>
         )}

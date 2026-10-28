@@ -48,9 +48,21 @@ export function getLongestHikeStatistics(hikes: Hike[]): CollectionStatistic[] {
 
 export function getRunStatistics(runs: Run[]): CollectionStatistic[] {
   const totalDistanceKm = runs.reduce((total, run) => total + run.distanceKm, 0)
+
   return [
     { label: 'Total runs', value: runs.length },
     { label: 'Total distance', value: `${totalDistanceKm.toLocaleString(undefined, { maximumFractionDigits: 1 })} km` },
+  ]
+}
+
+export function getRunDistanceCounts(runs: Run[]): CollectionStatistic[] {
+  const countRuns = (matches: (run: Run) => boolean) => runs.filter(matches).length
+
+  return [
+    { label: '5 km runs', value: countRuns((run) => run.distanceKm === 5) },
+    { label: '10 km runs', value: countRuns((run) => run.distanceKm === 10) },
+    { label: 'Half marathons', value: countRuns((run) => run.distanceName === 'Half Marathon' || run.distanceKm === 21.0975) },
+    { label: 'Marathons', value: countRuns((run) => run.distanceName === 'Marathon' || run.distanceKm === 42.195) },
   ]
 }
 

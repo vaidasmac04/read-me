@@ -10,7 +10,7 @@ import { JobCards } from '../components/JobCards'
 import { RunCards } from '../components/RunCards'
 import { TripCards } from '../components/TripCards'
 import { sortHikesByDate, sortJobsByDate, sortRunsByDate, sortTripsByDate } from '../utils/collectionSorting'
-import { getHikeStatistics, getLongestHikeStatistics, getRunBestResults, getRunStatistics, getTripStatistics } from '../utils/collectionStatistics'
+import { getHikeStatistics, getLongestHikeStatistics, getRunBestResults, getRunDistanceCounts, getRunStatistics, getTripStatistics } from '../utils/collectionStatistics'
 
 interface HomePageProps {
   jobsResource: AsyncData<JobEntry[]>
@@ -104,6 +104,11 @@ export function HomePage({ jobsResource, hikesResource, runsResource, tripsResou
               label="Run best results"
               heading="Best results"
               statistics={getRunBestResults(runsResource.data)}
+            />
+            <CollectionStatistics
+              label="Run counts by distance"
+              heading="Runs by distance"
+              statistics={getRunDistanceCounts(runsResource.data)}
             />
           </>
           : null}
