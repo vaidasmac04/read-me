@@ -12,62 +12,74 @@
       {
         "name": "Tokyo",
         "fromDate": "2026-08-12",
-        "toDate": "2026-08-15"
+        "toDate": "2026-08-15",
+        "country": "Japan"
       },
       {
         "name": "Nikko",
         "fromDate": "2026-08-16",
-        "toDate": "2026-08-16"
+        "toDate": "2026-08-16",
+        "country": "Japan"
       },
       {
         "name": "Hakone",
         "fromDate": "2026-08-17",
-        "toDate": "2026-08-18"
+        "toDate": "2026-08-18",
+        "country": "Japan"
       },
       {
         "name": "Kyoto",
         "fromDate": "2026-08-19",
-        "toDate": "2026-08-21"
+        "toDate": "2026-08-21",
+        "country": "Japan"
       },
       {
         "name": "Nara",
         "fromDate": "2026-08-22",
-        "toDate": "2026-08-22"
+        "toDate": "2026-08-22",
+        "country": "Japan"
       },
       {
         "name": "Osaka",
         "fromDate": "2026-08-22",
-        "toDate": "2026-08-24"
+        "toDate": "2026-08-24",
+        "country": "Japan"
       },
       {
         "name": "Kamakura",
         "fromDate": "2026-08-25",
-        "toDate": "2026-08-25"
+        "toDate": "2026-08-25",
+        "country": "Japan"
       },
       {
         "name": "Fujiyoshida",
         "fromDate": "2026-08-26",
-        "toDate": "2026-08-26"
+        "toDate": "2026-08-26",
+        "country": "Japan"
       },
       {
         "name": "Fujikawaguchiko",
         "fromDate": "2026-08-26",
-        "toDate": "2026-08-26"
+        "toDate": "2026-08-26",
+        "country": "Japan"
       },
       {
         "name": "Fujinomiya",
         "fromDate": "2026-08-26",
-        "toDate": "2026-08-26"
+        "toDate": "2026-08-26",
+        "country": "Japan"
       },
       {
         "name": "Fuji",
         "fromDate": "2026-08-26",
-        "toDate": "2026-08-26"
+        "toDate": "2026-08-26",
+        "country": "Japan"
       },
       {
         "name": "Tokyo",
         "fromDate": "2026-08-27",
-        "toDate": "2026-08-27"
+        "toDate": "2026-08-27",
+        "country": "Japan"
       }
     ]
   },
@@ -84,42 +96,50 @@
       {
         "name": "Sopot",
         "fromDate": "2026-07-23",
-        "toDate": "2026-07-23"
+        "toDate": "2026-07-23",
+        "country": "Poland"
       },
       {
         "name": "Gdynia",
         "fromDate": "2026-07-24",
-        "toDate": "2026-07-24"
+        "toDate": "2026-07-24",
+        "country": "Poland"
       },
       {
         "name": "Hel",
         "fromDate": "2026-07-25",
-        "toDate": "2026-07-25"
+        "toDate": "2026-07-25",
+        "country": "Poland"
       },
       {
         "name": "Rewa",
         "fromDate": "2026-07-25",
-        "toDate": "2026-07-25"
+        "toDate": "2026-07-25",
+        "country": "Poland"
       },
       {
         "name": "Jurata",
         "fromDate": "2026-07-25",
-        "toDate": "2026-07-25"
+        "toDate": "2026-07-25",
+        "country": "Poland"
       },
       {
         "name": "Jastarnia",
         "fromDate": "2026-07-25",
-        "toDate": "2026-07-25"
+        "toDate": "2026-07-25",
+        "country": "Poland"
       },
       {
         "name": "Wladyslawowo",
         "fromDate": "2026-07-25",
-        "toDate": "2026-07-25"
+        "toDate": "2026-07-25",
+        "country": "Poland"
       },
       {
         "name": "Gdynia",
         "fromDate": "2026-07-26",
-        "toDate": "2026-07-26"
+        "toDate": "2026-07-26",
+        "country": "Poland"
       }
     ]
   },
@@ -136,7 +156,8 @@
       {
         "name": "Augustów",
         "fromDate": "2026-04-10",
-        "toDate": "2026-04-12"
+        "toDate": "2026-04-12",
+        "country": "Poland"
       }
     ]
   },
@@ -153,17 +174,20 @@
       {
         "name": "Rome",
         "fromDate": "2026-02-19",
-        "toDate": "2026-02-22"
+        "toDate": "2026-02-22",
+        "country": "Italy"
       },
       {
         "name": "Pisa",
         "fromDate": "2026-02-23",
-        "toDate": "2026-02-23"
+        "toDate": "2026-02-23",
+        "country": "Italy"
       },
       {
         "name": "Venice",
         "fromDate": "2026-02-24",
-        "toDate": "2026-02-27"
+        "toDate": "2026-02-27",
+        "country": "Italy"
       }
     ]
   },
@@ -180,7 +204,8 @@
       {
         "name": "Suwałki",
         "fromDate": "2026-02-14",
-        "toDate": "2026-02-15"
+        "toDate": "2026-02-15",
+        "country": "Poland"
       }
     ]
   },
@@ -197,7 +222,8 @@
       {
         "name": "Jelgava",
         "fromDate": "2026-02-07",
-        "toDate": "2026-02-08"
+        "toDate": "2026-02-08",
+        "country": "Latvia"
       }
     ]
   },
@@ -214,7 +240,8 @@
       {
         "name": "London",
         "fromDate": "2025-09-27",
-        "toDate": "2025-10-01"
+        "toDate": "2025-10-01",
+        "country": "England"
       }
     ]
   },
@@ -231,42 +258,50 @@
       {
         "name": "Bauska",
         "fromDate": "2025-07-04",
-        "toDate": "2025-07-04"
+        "toDate": "2025-07-04",
+        "country": "Latvia"
       },
       {
         "name": "Sigulda",
         "fromDate": "2025-07-04",
-        "toDate": "2025-07-05"
+        "toDate": "2025-07-05",
+        "country": "Latvia"
       },
       {
         "name": "Jūrmala",
         "fromDate": "2025-07-06",
-        "toDate": "2025-07-07"
+        "toDate": "2025-07-07",
+        "country": "Latvia"
       },
       {
         "name": "Roja",
         "fromDate": "2025-07-07",
-        "toDate": "2025-07-07"
+        "toDate": "2025-07-07",
+        "country": "Latvia"
       },
       {
         "name": "Kolka",
         "fromDate": "2025-07-07",
-        "toDate": "2025-07-07"
+        "toDate": "2025-07-07",
+        "country": "Latvia"
       },
       {
         "name": "Ventspils",
         "fromDate": "2025-07-07",
-        "toDate": "2025-07-09"
+        "toDate": "2025-07-09",
+        "country": "Latvia"
       },
       {
         "name": "Kuldīga",
         "fromDate": "2025-07-09",
-        "toDate": "2025-07-10"
+        "toDate": "2025-07-10",
+        "country": "Latvia"
       },
       {
         "name": "Liepāja",
         "fromDate": "2025-07-10",
-        "toDate": "2025-07-12"
+        "toDate": "2025-07-12",
+        "country": "Latvia"
       }
     ]
   },
@@ -283,32 +318,38 @@
       {
         "name": "Oslo",
         "fromDate": "2025-06-17",
-        "toDate": "2025-06-19"
+        "toDate": "2025-06-19",
+        "country": "Norway"
       },
       {
         "name": "Ålesund",
         "fromDate": "2025-06-19",
-        "toDate": "2025-06-21"
+        "toDate": "2025-06-21",
+        "country": "Norway"
       },
       {
         "name": "Geiranger",
         "fromDate": "2025-06-20",
-        "toDate": "2025-06-20"
+        "toDate": "2025-06-20",
+        "country": "Norway"
       },
       {
         "name": "Øye",
         "fromDate": "2025-06-20",
-        "toDate": "2025-06-20"
+        "toDate": "2025-06-20",
+        "country": "Norway"
       },
       {
         "name": "Hellesylt",
         "fromDate": "2025-06-20",
-        "toDate": "2025-06-20"
+        "toDate": "2025-06-20",
+        "country": "Norway"
       },
       {
         "name": "Bergen",
         "fromDate": "2025-06-21",
-        "toDate": "2025-06-25"
+        "toDate": "2025-06-25",
+        "country": "Norway"
       }
     ]
   },
@@ -328,27 +369,32 @@
       {
         "name": "Riga",
         "fromDate": "2025-04-24",
-        "toDate": "2025-04-24"
+        "toDate": "2025-04-24",
+        "country": "Latvia"
       },
       {
         "name": "Tallinn",
         "fromDate": "2025-04-24",
-        "toDate": "2025-04-25"
+        "toDate": "2025-04-25",
+        "country": "Estonia"
       },
       {
         "name": "Helsinki",
         "fromDate": "2025-04-25",
-        "toDate": "2025-04-25"
+        "toDate": "2025-04-25",
+        "country": "Finland"
       },
       {
         "name": "Stockholm",
         "fromDate": "2025-04-25",
-        "toDate": "2025-04-26"
+        "toDate": "2025-04-26",
+        "country": "Sweden"
       },
       {
         "name": "Tallinn",
         "fromDate": "2025-04-27",
-        "toDate": "2025-04-27"
+        "toDate": "2025-04-27",
+        "country": "Estonia"
       }
     ]
   },
@@ -365,27 +411,32 @@
       {
         "name": "Madrid",
         "fromDate": "2025-02-01",
-        "toDate": "2025-02-03"
+        "toDate": "2025-02-03",
+        "country": "Spain"
       },
       {
         "name": "Toledo ",
         "fromDate": "2025-02-04",
-        "toDate": "2025-02-04"
+        "toDate": "2025-02-04",
+        "country": "Spain"
       },
       {
         "name": "Barcelona",
         "fromDate": "2025-02-05",
-        "toDate": "2025-02-06"
+        "toDate": "2025-02-06",
+        "country": "Spain"
       },
       {
         "name": "Zaragoza",
         "fromDate": "2025-02-07",
-        "toDate": "2025-02-07"
+        "toDate": "2025-02-07",
+        "country": "Spain"
       },
       {
         "name": "Madrid",
         "fromDate": "2025-02-08",
-        "toDate": "2025-02-08"
+        "toDate": "2025-02-08",
+        "country": "Spain"
       }
     ]
   },
@@ -402,12 +453,14 @@
       {
         "name": "Gdansk",
         "fromDate": "2024-12-14",
-        "toDate": "2024-12-15"
+        "toDate": "2024-12-15",
+        "country": "Poland"
       },
       {
         "name": "Malbork",
         "fromDate": "2024-12-15",
-        "toDate": "2024-12-15"
+        "toDate": "2024-12-15",
+        "country": "Poland"
       }
     ]
   },
@@ -424,90 +477,106 @@
       {
         "name": "Athens",
         "fromDate": "2024-06-20",
-        "toDate": "2024-06-24"
+        "toDate": "2024-06-24",
+        "country": "Greece"
       },
       {
         "name": "Kalabaka",
         "fromDate": "2024-06-22",
-        "toDate": "2024-06-22"
+        "toDate": "2024-06-22",
+        "country": "Greece"
       },
       {
         "name": "Piraeus",
         "fromDate": "2024-06-23",
-        "toDate": "2024-06-23"
+        "toDate": "2024-06-23",
+        "country": "Greece"
       },
       {
         "name": "Delphi",
         "fromDate": "2024-06-24",
-        "toDate": "2024-06-24"
+        "toDate": "2024-06-24",
+        "country": "Greece"
       },
       {
         "name": "Fira",
         "group": "Santorini",
         "fromDate": "2024-06-25",
-        "toDate": "2024-06-25"
+        "toDate": "2024-06-25",
+        "country": "Greece"
       },
       {
         "name": "Imerovigli",
         "group": "Santorini",
         "fromDate": "2024-06-25",
-        "toDate": "2024-06-25"
+        "toDate": "2024-06-25",
+        "country": "Greece"
       },
       {
         "name": "Finikia",
         "group": "Santorini",
         "fromDate": "2024-06-25",
-        "toDate": "2024-06-25"
+        "toDate": "2024-06-25",
+        "country": "Greece"
       },
       {
         "name": "Oia",
         "group": "Santorini",
         "fromDate": "2024-06-25",
-        "toDate": "2024-06-25"
+        "toDate": "2024-06-25",
+        "country": "Greece"
       },
       {
         "name": "Megalochori",
         "group": "Santorini",
         "fromDate": "2024-06-26",
-        "toDate": "2024-06-26"
+        "toDate": "2024-06-26",
+        "country": "Greece"
       },
       {
         "name": "Akrotiri",
         "group": "Santorini",
         "fromDate": "2024-06-26",
-        "toDate": "2024-06-26"
+        "toDate": "2024-06-26",
+        "country": "Greece"
       },
       {
         "name": "Emporio",
         "group": "Santorini",
         "fromDate": "2024-06-27",
-        "toDate": "2024-06-27"
+        "toDate": "2024-06-27",
+        "country": "Greece"
       },
       {
         "name": "Perrisa",
         "group": "Santorini",
         "fromDate": "2024-06-27",
-        "toDate": "2024-06-27"
+        "toDate": "2024-06-27",
+        "country": "Greece"
       },
       {
         "name": "Athens",
         "fromDate": "2024-06-28",
-        "toDate": "2024-06-29"
+        "toDate": "2024-06-29",
+        "country": "Greece"
       },
       {
         "name": "Corinth",
         "fromDate": "2024-06-29",
-        "toDate": "2024-06-29"
+        "toDate": "2024-06-29",
+        "country": "Greece"
       },
       {
         "name": "Nafplio",
         "fromDate": "2024-06-29",
-        "toDate": "2024-06-29"
+        "toDate": "2024-06-29",
+        "country": "Greece"
       },
       {
         "name": "Spata",
         "fromDate": "2024-06-30",
-        "toDate": "2024-06-30"
+        "toDate": "2024-06-30",
+        "country": "Greece"
       }
     ]
   },
@@ -524,7 +593,8 @@
       {
         "name": "Oslo",
         "fromDate": "2024-01-22",
-        "toDate": "2024-01-26"
+        "toDate": "2024-01-26",
+        "country": "Norway"
       }
     ]
   },
@@ -542,22 +612,26 @@
       {
         "name": "Tallinn",
         "fromDate": "2023-12-27",
-        "toDate": "2023-12-28"
+        "toDate": "2023-12-28",
+        "country": "Estonia"
       },
       {
         "name": "Riga",
         "fromDate": "2023-12-28",
-        "toDate": "2023-12-29"
+        "toDate": "2023-12-29",
+        "country": "Latvia"
       },
       {
         "name": "Jūrmala",
         "fromDate": "2023-12-29",
-        "toDate": "2023-12-29"
+        "toDate": "2023-12-29",
+        "country": "Latvia"
       },
       {
         "name": "Riga",
         "fromDate": "2023-12-29",
-        "toDate": "2023-12-30"
+        "toDate": "2023-12-30",
+        "country": "Latvia"
       }
     ]
   },
@@ -574,7 +648,8 @@
       {
         "name": "Oslo",
         "fromDate": "2023-10-02",
-        "toDate": "2023-10-05"
+        "toDate": "2023-10-05",
+        "country": "Norway"
       }
     ]
   },
@@ -591,7 +666,8 @@
       {
         "name": "Jūrmala",
         "fromDate": "2023-08-05",
-        "toDate": "2023-08-06"
+        "toDate": "2023-08-06",
+        "country": "Latvia"
       }
     ]
   },
@@ -608,7 +684,8 @@
       {
         "name": "Oslo",
         "fromDate": "2023-05-10",
-        "toDate": "2023-05-12"
+        "toDate": "2023-05-12",
+        "country": "Norway"
       }
     ]
   },
@@ -625,7 +702,8 @@
       {
         "name": "Warsaw",
         "fromDate": "2023-04-21",
-        "toDate": "2023-04-23"
+        "toDate": "2023-04-23",
+        "country": "Poland"
       }
     ]
   },
@@ -642,11 +720,12 @@
       {
         "name": "Gothenburg",
         "fromDate": "2023-03-13",
-        "toDate": "2023-03-15"
+        "toDate": "2023-03-15",
+        "country": "Sweden"
       }
     ]
   },
-   {
+  {
     "title": null,
     "country": [
       "Latvia"
@@ -659,7 +738,8 @@
       {
         "name": "Jelgava",
         "fromDate": "2023-02-04",
-        "toDate": "2023-02-04"
+        "toDate": "2023-02-04",
+        "country": "Latvia"
       }
     ]
   },
@@ -676,7 +756,26 @@
       {
         "name": "Oslo",
         "fromDate": "2022-12-12",
-        "toDate": "2022-12-17"
+        "toDate": "2022-12-17",
+        "country": "Norway"
+      }
+    ]
+  },
+  {
+    "title": null,
+    "country": [
+      "Ukraine"
+    ],
+    "region": "Europe",
+    "season": "Spring 2018",
+    "fromDate": "2018-04-26",
+    "toDate": "2018-04-29",
+    "cities": [
+      {
+        "name": "Lviv",
+        "fromDate": "2018-04-26",
+        "toDate": "2018-04-29",
+        "country": "Ukraine"
       }
     ]
   }
