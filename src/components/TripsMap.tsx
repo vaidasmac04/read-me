@@ -1,7 +1,6 @@
 import { ComposableMap, Geography, Geographies, Graticule, Sphere } from 'react-simple-maps'
 import worldCountries from 'world-atlas/countries-110m.json?url'
 import type { Trip } from '../data/tripsService'
-import { normalizeCountryName } from '../utils/countryNames'
 
 export function TripsMap({
   trips,
@@ -12,14 +11,12 @@ export function TripsMap({
   selectedCountry: string | null
   onCountrySelect: (country: string) => void
 }) {
-  const visitedCountries = new Set(
-    trips.flatMap((trip) => trip.country.map(normalizeCountryName)),
-  )
+  const visitedCountries = new Set(trips.flatMap((trip) => trip.country))
   const visitedCountryNames = [...visitedCountries].sort()
   const tripCountsByCountry = new Map<string, number>()
 
   trips.forEach((trip) => {
-    new Set(trip.country.map(normalizeCountryName)).forEach((country) => {
+    new Set(trip.country).forEach((country) => {
       tripCountsByCountry.set(country, (tripCountsByCountry.get(country) ?? 0) + 1)
     })
   })
@@ -41,12 +38,9 @@ export function TripsMap({
           <Geographies geography={worldCountries}>
             {({ geographies }) => geographies.map((geography) => {
               const countryName = geography.properties?.name
-              const normalizedCountry = typeof countryName === 'string'
-                ? normalizeCountryName(countryName)
-                : null
-              const isVisited = normalizedCountry !== null && visitedCountries.has(normalizedCountry)
-              const isSelected = normalizedCountry === normalizeCountryName(selectedCountry ?? '')
-              const tripCount = normalizedCountry === null ? 0 : tripCountsByCountry.get(normalizedCountry) ?? 0
+              const isVisited = typeof countryName === 'string' && visitedCountries.has(countryName)
+              const isSelected = countryName === selectedCountry
+              const tripCount = typeof countryName === 'string' ? tripCountsByCountry.get(countryName) ?? 0 : 0
               const label = `${countryName ?? 'Unknown country'}: ${tripCount} ${tripCount === 1 ? 'trip' : 'trips'}`
 
               return (

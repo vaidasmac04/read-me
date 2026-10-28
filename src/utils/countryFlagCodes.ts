@@ -1,5 +1,4 @@
 const countryFlagCodes: Record<string, string> = {
-  England: 'gb-eng',
   Estonia: 'ee',
   Finland: 'fi',
   Greece: 'gr',
@@ -9,6 +8,7 @@ const countryFlagCodes: Record<string, string> = {
   Lithuania: 'lt',
   Norway: 'no',
   Poland: 'pl',
+  'United Kingdom': 'gb',
   Spain: 'es',
   Sweden: 'se',
   Ukraine: 'ua',

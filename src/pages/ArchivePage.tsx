@@ -12,7 +12,6 @@ import { PlacesVisited } from '../components/PlacesVisited'
 import { RunCards } from '../components/RunCards'
 import { TripCards } from '../components/TripCards'
 import { TripsMap } from '../components/TripsMap'
-import { normalizeCountryName } from '../utils/countryNames'
 import { sortHikesByDate, sortJobsByDate, sortRunsByDate, sortTripsByDate } from '../utils/collectionSorting'
 import { getHikeStatistics, getLongestHikeStatistics, getRunBestResults, getRunStatistics, getTripStatistics } from '../utils/collectionStatistics'
 
@@ -116,9 +115,7 @@ function TripsArchive({ tripsResource }: { tripsResource: AsyncData<Trip[]> }) {
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null)
   const filteredTrips = selectedCountry === null
     ? trips
-    : trips.filter((trip) => trip.country.some(
-      (country) => normalizeCountryName(country) === normalizeCountryName(selectedCountry),
-    ))
+    : trips.filter((trip) => trip.country.includes(selectedCountry))
 
   return (
     <ArchiveLayout title="Trips">

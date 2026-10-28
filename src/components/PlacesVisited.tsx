@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import type { Trip } from '../data/tripsService'
 import { getCountryFlagCode } from '../utils/countryFlagCodes'
-import { normalizeCountryName } from '../utils/countryNames'
 
 function getPlacesByCountry(trips: Trip[]) {
   const placesByCountry = new Map<string, Set<string>>()
@@ -38,7 +37,7 @@ export function PlacesVisited({
 
   if (countries.length === 0) return null
   const visibleCountries = countries.filter(({ country }) =>
-    (selectedCountry === null || normalizeCountryName(country) === normalizeCountryName(selectedCountry))
+    (selectedCountry === null || country === selectedCountry)
     && (expandedCountry === null || country === expandedCountry),
   )
 
