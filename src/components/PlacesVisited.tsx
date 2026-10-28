@@ -28,9 +28,11 @@ function getPlacesByCountry(trips: Trip[]) {
 export function PlacesVisited({
   trips,
   selectedCountry,
+  embedded = false,
 }: {
   trips: Trip[]
   selectedCountry: string | null
+  embedded?: boolean
 }) {
   const countries = getPlacesByCountry(trips)
   const [expandedCountry, setExpandedCountry] = useState<string | null>(null)
@@ -43,35 +45,35 @@ export function PlacesVisited({
 
   return (
     <section
-      className="content-section places-visited-section"
+      className={`places-visited-section${embedded ? ' places-visited-embedded' : ' content-section'}`}
       aria-label={selectedCountry ? `Cities visited in ${selectedCountry}` : 'Countries'}
     >
-      <div className="section-heading">
-        <p className="section-kicker">Countries</p>
-      </div>
-      <div className="places-visited-grid">
-        {visibleCountries.map(({ country, cities }) => {
-          const flagCode = getCountryFlagCode(country)
+      {!embedded && <h2 className="places-visited-heading">Countries</h2>}
+      <div className="trip-card places-visited-card">
+        <div className="places-visited-grid">
+          {visibleCountries.map(({ country, cities }) => {
+            const flagCode = getCountryFlagCode(country)
 
-          return (
-            <details className="places-country" key={country} open={expandedCountry === country}>
-              <summary onClick={(event) => {
-                event.preventDefault()
-                setExpandedCountry((currentCountry) => currentCountry === country ? null : country)
-              }}>
-                {flagCode && <span className={`fi fi-${flagCode}`} aria-hidden="true" />}
-                {country}
-                <span className="places-country-toggle">
-                  <span className="places-city-count">{cities.length} {cities.length === 1 ? 'city' : 'cities'}</span>
-                  <span className="places-country-chevron" aria-hidden="true" />
-                </span>
-              </summary>
-              <ul>
-                {cities.map((city) => <li key={city}>{city}</li>)}
-              </ul>
-            </details>
-          )
-        })}
+            return (
+              <details className="places-country" key={country} open={expandedCountry === country}>
+                <summary onClick={(event) => {
+                  event.preventDefault()
+                  setExpandedCountry((currentCountry) => currentCountry === country ? null : country)
+                }}>
+                  {flagCode && <span className={`fi fi-${flagCode}`} aria-hidden="true" />}
+                  {country}
+                  <span className="places-country-toggle">
+                    <span className="places-city-count">{cities.length} {cities.length === 1 ? 'city' : 'cities'}</span>
+                    <span className="places-country-chevron" aria-hidden="true" />
+                  </span>
+                </summary>
+                <ul>
+                  {cities.map((city) => <li key={city}>{city}</li>)}
+                </ul>
+              </details>
+            )
+          })}
+        </div>
       </div>
     </section>
   )

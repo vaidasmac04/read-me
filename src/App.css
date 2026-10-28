@@ -161,6 +161,63 @@
   text-align: left;
 }
 
+.places-visited-heading {
+  margin: 0 0 20px;
+  color: #201812;
+  font-size: 1.7rem;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.places-visited-card {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.places-visited-embedded {
+  margin-bottom: 24px;
+}
+
+.year-review-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+}
+
+.year-review-index .year-review-links {
+  justify-content: center;
+}
+
+.year-review-link {
+  color: #3f684f;
+  font-weight: 700;
+  text-underline-offset: 4px;
+}
+
+.year-review-link:hover {
+  color: #201812;
+}
+
+.year-review-link:focus-visible {
+  outline: 2px solid #3f684f;
+  outline-offset: 3px;
+}
+
+.year-review-navigation {
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.year-review-navigation [aria-current='page'] {
+  color: #201812;
+  text-decoration-thickness: 2px;
+}
+
+.year-review-section .section-heading h2 {
+  font-size: 1.7rem;
+  letter-spacing: 0;
+}
+
 .places-country {
   min-width: 0;
 }
@@ -352,12 +409,24 @@
 }
 
 .hikes-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 
 @media (min-width: 769px) {
+  .hikes-grid > .hike-card {
+    grid-column: span 2;
+  }
+
   .hikes-grid > .hike-card:last-child:nth-child(3n + 1) {
-    grid-column: 2;
+    grid-column: 3 / span 2;
+  }
+
+  .hikes-grid > .hike-card:nth-last-child(2):nth-child(3n + 1) {
+    grid-column: 2 / span 2;
+  }
+
+  .hikes-grid > .hike-card:last-child:nth-child(3n + 2) {
+    grid-column: 4 / span 2;
   }
 }
 
@@ -761,6 +830,7 @@
 
   .trip-grid > .trip-card,
   .runs-grid > .entry-card,
+  .hikes-grid > .hike-card,
   .trip-grid > .trip-card:last-child:nth-child(3n + 1),
   .trip-grid > .trip-card:nth-last-child(2):nth-child(3n + 1),
   .trip-grid > .trip-card:last-child:nth-child(3n + 2),

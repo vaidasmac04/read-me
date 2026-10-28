@@ -6,6 +6,7 @@ import { fetchTrips } from './data/tripsService'
 import { useAsyncData } from './hooks/useAsyncData'
 import { ArchivePage, type ArchiveCollection } from './pages/ArchivePage'
 import { HomePage } from './pages/HomePage'
+import { YearReviewPage } from './pages/YearReviewPage'
 import './App.css'
 
 function getHashRoute(): string {
@@ -38,6 +39,18 @@ function App() {
   const collection = route.slice(1)
   if (collection === 'jobs' || collection === 'runs' || collection === 'trips' || collection === 'hikes') {
     return <ArchivePage collection={collection as ArchiveCollection} {...pageResources} />
+  }
+
+  const yearReviewMatch = route.match(/^\/years\/(\d{4})$/)
+  if (yearReviewMatch) {
+    return (
+      <YearReviewPage
+        year={Number(yearReviewMatch[1])}
+        hikesResource={hikesResource}
+        runsResource={runsResource}
+        tripsResource={tripsResource}
+      />
+    )
   }
 
   return (

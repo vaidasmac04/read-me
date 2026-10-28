@@ -11,6 +11,7 @@ import { RunCards } from '../components/RunCards'
 import { TripCards } from '../components/TripCards'
 import { sortHikesByDate, sortJobsByDate, sortRunsByDate, sortTripsByDate } from '../utils/collectionSorting'
 import { getHikeStatistics, getLongestHikeStatistics, getRunBestResults, getRunDistanceCounts, getRunStatistics, getTripStatistics } from '../utils/collectionStatistics'
+import { getAvailableReviewYears } from '../utils/yearReview'
 
 interface HomePageProps {
   jobsResource: AsyncData<JobEntry[]>
@@ -24,6 +25,9 @@ export function HomePage({ jobsResource, hikesResource, runsResource, tripsResou
   const hikes = sortHikesByDate(hikesResource.data)
   const runs = sortRunsByDate(runsResource.data)
   const trips = sortTripsByDate(tripsResource.data)
+  const reviewDataReady = [hikesResource, runsResource, tripsResource]
+    .every((resource) => !resource.isLoading && !resource.hasError)
+  const reviewYears = getAvailableReviewYears(trips, hikes, runs)
 
   return (
     <main className="page-shell">
@@ -38,6 +42,22 @@ export function HomePage({ jobsResource, hikesResource, runsResource, tripsResou
           <h2>Life is better when you keep exploring</h2>
         </div>
       </section>
+
+      {reviewDataReady && reviewYears.length > 0 && (
+        <section className="content-section year-review-index">
+          <div className="section-heading">
+            <p className="section-kicker">Year in Review</p>
+            <h2>Explore by year</h2>
+          </div>
+          <nav className="year-review-links" aria-label="Year-in-review pages">
+            {reviewYears.map((year) => (
+              <a className="year-review-link" href={`#/years/${year}`} key={year}>
+                {year}
+              </a>
+            ))}
+          </nav>
+        </section>
+      )}
 
       <CollectionSection title="Jobs" href="#/jobs" actionLabel="See all jobs" resource={jobsResource} items={jobs} emptyMessage="No jobs to show yet." enableCardNavigation>
         {(entries) => <JobCards entries={entries} />}
